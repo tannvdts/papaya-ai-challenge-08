@@ -1,0 +1,27 @@
+{
+  "id": "MT-07-discharge-two-pages",
+  "title": "Giấy ra viện hai trang, Việt/Anh",
+  "file": "MT-07-discharge-two-pages.pdf",
+  "page_count": 2,
+  "document_types": [
+    "discharge_summary"
+  ],
+  "risks": [
+    "page continuity",
+    "Vietnamese/English"
+  ],
+  "expected": {
+    "document_count": 1,
+    "pages": [
+      1,
+      2
+    ],
+    "patient": "Demo Patient D01",
+    "admission_date": "23/04/2026",
+    "discharge_date": "25/04/2026",
+    "primary_diagnosis": "Viêm họng / Pharyngitis",
+    "preserve_language": true
+  },
+  "synthetic": true,
+  "image_only": true
+}

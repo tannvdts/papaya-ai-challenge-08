@@ -1,0 +1,477 @@
+[
+  {
+    "id": "SM-01",
+    "suite": "smoke",
+    "name": "Khởi động bằng env hợp lệ, Reader fake chủ động"
+  },
+  {
+    "id": "SM-02",
+    "suite": "smoke",
+    "name": "MCP initialize/list/call"
+  },
+  {
+    "id": "SM-03",
+    "suite": "smoke",
+    "name": "GET live và readiness với cấu hình openai hợp lệ nhưng chưa verify"
+  },
+  {
+    "id": "SM-04",
+    "suite": "smoke",
+    "name": "Upload một receipt PDF, fake Reader trả kết quả chuẩn"
+  },
+  {
+    "id": "SM-05",
+    "suite": "smoke",
+    "name": "Upload một ảnh prescription"
+  },
+  {
+    "id": "SM-06",
+    "suite": "smoke",
+    "name": "Composite có hai tài liệu khác loại"
+  },
+  {
+    "id": "SM-07",
+    "suite": "smoke",
+    "name": "Một field có confidence 0.49"
+  },
+  {
+    "id": "SM-08",
+    "suite": "smoke",
+    "name": "Ngày/cờ confidence cao chưa confirm"
+  },
+  {
+    "id": "SM-09",
+    "suite": "smoke",
+    "name": "Tạo HTML và mở trực tiếp offline"
+  },
+  {
+    "id": "SM-10",
+    "suite": "smoke",
+    "name": "Đồng hồ đến đúng expires_at"
+  },
+  {
+    "id": "SM-11",
+    "suite": "smoke",
+    "name": "MCP ngắt hoặc MongoDB down rồi phục hồi"
+  },
+  {
+    "id": "SM-12",
+    "suite": "smoke",
+    "name": "Poll health + validate/crop/report/review"
+  },
+  {
+    "id": "IT-DOC-01",
+    "suite": "integration",
+    "name": "10 baseline qua pipeline nội bộ thật, fake Reader dựa trên từng ground truth"
+  },
+  {
+    "id": "IT-DOC-02",
+    "suite": "integration",
+    "name": "Cùng file có receipt, lab, prescription"
+  },
+  {
+    "id": "IT-DOC-03",
+    "suite": "integration",
+    "name": "Hai receipts cùng loại, khác bệnh nhân"
+  },
+  {
+    "id": "IT-DOC-04",
+    "suite": "integration",
+    "name": "Một hóa đơn qua nhiều trang, lặp header và có tổng cuối"
+  },
+  {
+    "id": "IT-DOC-05",
+    "suite": "integration",
+    "name": "Hai biên lai trên cùng trang"
+  },
+  {
+    "id": "IT-DOC-06",
+    "suite": "integration",
+    "name": "Không rõ boundaries/patient hoặc trang ngoài bốn loại"
+  },
+  {
+    "id": "IT-DOC-07",
+    "suite": "integration",
+    "name": "Trang/chunk thiếu, vùng chưa giải thích hoặc overlap"
+  },
+  {
+    "id": "IT-DOC-08",
+    "suite": "integration",
+    "name": "PDF text, scan, ảnh xoay, chữ nhỏ/mờ; text layer sai thứ tự"
+  },
+  {
+    "id": "IT-DOC-09",
+    "suite": "integration",
+    "name": "Tiếng Việt có dấu, Anh, chữ ngoài Latin, mixed language"
+  },
+  {
+    "id": "IT-DOC-10",
+    "suite": "integration",
+    "name": "Viết tay rõ/khó; trường không đọc được so với không tồn tại"
+  },
+  {
+    "id": "IT-DOC-11",
+    "suite": "integration",
+    "name": "Bbox ngoài ảnh, sai trang, tọa độ sau rotate/scale"
+  },
+  {
+    "id": "IT-DOC-12",
+    "suite": "integration",
+    "name": "PDF hỏng/mã hóa, file giả extension, quá dung lượng/trang, file rỗng"
+  },
+  {
+    "id": "IT-DATE-01",
+    "suite": "integration",
+    "name": "Ngày DD/MM rõ như 23/04/2026"
+  },
+  {
+    "id": "IT-DATE-02",
+    "suite": "integration",
+    "name": "03/04/2026"
+  },
+  {
+    "id": "IT-DATE-03",
+    "suite": "integration",
+    "name": "03/03/2026, ngày không tồn tại, 29/02 năm nhuận/không nhuận"
+  },
+  {
+    "id": "IT-DATE-04",
+    "suite": "integration",
+    "name": "Năm 2 chữ số, ngày chữ/ngôn ngữ khác, lịch chưa hỗ trợ, thiếu căn cứ"
+  },
+  {
+    "id": "IT-MONEY-01",
+    "suite": "integration",
+    "name": "1,234.56 theo format chung, currency rõ"
+  },
+  {
+    "id": "IT-MONEY-02",
+    "suite": "integration",
+    "name": "1.234,56; 1 234,56; 1,234 mơ hồ"
+  },
+  {
+    "id": "IT-MONEY-03",
+    "suite": "integration",
+    "name": "Currency thiếu, ký hiệu $ không đủ phân biệt, nhiều currency"
+  },
+  {
+    "id": "IT-MONEY-04",
+    "suite": "integration",
+    "name": "Dòng 0, discount, refund âm/ngoặc, thuế cấp dòng/toàn hóa đơn"
+  },
+  {
+    "id": "IT-MONEY-05",
+    "suite": "integration",
+    "name": "Lệch ngay dưới/đúng/trên 5%; grand total 0 hoặc refund âm"
+  },
+  {
+    "id": "IT-MONEY-06",
+    "suite": "integration",
+    "name": "Nhiều dòng thập phân, số lớn và vượt độ biểu diễn Decimal128"
+  },
+  {
+    "id": "IT-FLAG-01",
+    "suite": "integration",
+    "name": "normal/high/low, hoa/thường/khoảng trắng"
+  },
+  {
+    "id": "IT-FLAG-02",
+    "suite": "integration",
+    "name": "H/L/HH/LL/critical/dấu sao/màu"
+  },
+  {
+    "id": "IT-FLAG-03",
+    "suite": "integration",
+    "name": "Không ghi flag nhưng result ngoài reference range"
+  },
+  {
+    "id": "IT-CONF-01",
+    "suite": "integration",
+    "name": "Một field con/list item dưới 0.5, các field khác rất cao"
+  },
+  {
+    "id": "IT-CONF-02",
+    "suite": "integration",
+    "name": "0, 0.1999, 0.2, 0.4999, 0.5, 0.7999, 0.8, 0.9499, 0.95, 1"
+  },
+  {
+    "id": "IT-CONF-03",
+    "suite": "integration",
+    "name": "NaN/null/ngoài 0–1, task rỗng, thiếu required field, field không áp dụng"
+  },
+  {
+    "id": "IT-CONF-04",
+    "suite": "integration",
+    "name": "Model trả 0.99 cho ngày mơ hồ/currency thiếu/flag ngoài chuẩn"
+  },
+  {
+    "id": "IT-MCP-01",
+    "suite": "integration",
+    "name": "Input/output sai schema, thiếu tool/version, protocol output lẫn log"
+  },
+  {
+    "id": "IT-MCP-02",
+    "suite": "integration",
+    "name": "MCP disconnect/timeout giữa call và commit, retry cùng operation ID"
+  },
+  {
+    "id": "IT-DB-01",
+    "suite": "integration",
+    "name": "Review + audit + pointer transaction bị ngắt giữa chừng"
+  },
+  {
+    "id": "IT-DB-02",
+    "suite": "integration",
+    "name": "Hai reviewer sửa cùng expected_revision; export cùng lúc"
+  },
+  {
+    "id": "IT-DB-03",
+    "suite": "integration",
+    "name": "Mongo down, không phải replica set hoặc transaction capability chưa sẵn sàng"
+  },
+  {
+    "id": "IT-WORK-01",
+    "suite": "integration",
+    "name": "Hai worker claim, lease hết hạn, worker cũ trả kết quả muộn"
+  },
+  {
+    "id": "IT-WORK-02",
+    "suite": "integration",
+    "name": "Crash sau ghi file trước DB hoặc sau DB trước publish artifact"
+  },
+  {
+    "id": "IT-REVIEW-01",
+    "suite": "integration",
+    "name": "Pending mandatory field nhưng gọi export trực tiếp/API/MCP"
+  },
+  {
+    "id": "IT-REVIEW-02",
+    "suite": "integration",
+    "name": "Confirm/correct đủ quyền và đúng revision"
+  },
+  {
+    "id": "IT-REVIEW-03",
+    "suite": "integration",
+    "name": "Rerun/sửa nguồn sau approve; approve trường thiếu bắt buộc downstream"
+  },
+  {
+    "id": "IT-CACHE-01",
+    "suite": "integration",
+    "name": "Upload cùng file lần hai; thay model/prompt/schema/input settings/quyền"
+  },
+  {
+    "id": "IT-ENV-01",
+    "suite": "integration",
+    "name": "Thiếu key/model trong openai mode; timeout/retry/budget sai; disabled/mock chủ động"
+  },
+  {
+    "id": "IT-ENV-02",
+    "suite": "integration",
+    "name": "Đổi key/model/base URL/project/org, restart cùng build"
+  },
+  {
+    "id": "IT-ENV-03",
+    "suite": "integration",
+    "name": "MCP child spawn, health/report/log/error snapshots"
+  },
+  {
+    "id": "IT-AI-01",
+    "suite": "integration",
+    "name": "Provider trả valid, invalid schema, refusal, incomplete hoặc output bị cắt"
+  },
+  {
+    "id": "IT-AI-02",
+    "suite": "integration",
+    "name": "401, 403, 429, 5xx, network timeout"
+  },
+  {
+    "id": "IT-AI-03",
+    "suite": "integration",
+    "name": "SDK retries + workflow retries, max calls/task, targeted reread"
+  },
+  {
+    "id": "IT-AI-04",
+    "suite": "integration",
+    "name": "Validation/crop/review/report/cleanup và confidence thấp"
+  },
+  {
+    "id": "IT-HEALTH-01",
+    "suite": "integration",
+    "name": "DB/MCP/storage/worker down và recovery, shutting down"
+  },
+  {
+    "id": "IT-HEALTH-02",
+    "suite": "integration",
+    "name": "Env valid nhưng chưa verify; cache health quá hạn; key/model đổi"
+  },
+  {
+    "id": "IT-HEALTH-03",
+    "suite": "integration",
+    "name": "Poll health nhiều lần, disabled AI nhưng review/report còn đủ dependency"
+  },
+  {
+    "id": "IT-HEALTH-04",
+    "suite": "integration",
+    "name": "Verify chủ động, thiếu quyền, cooldown/budget, lỗi provider"
+  },
+  {
+    "id": "IT-REPORT-01",
+    "suite": "integration",
+    "name": "N documents, danh sách dài, null/ứng viên, ảnh có/không có, nhiều ngôn ngữ"
+  },
+  {
+    "id": "IT-REPORT-02",
+    "suite": "integration",
+    "name": "Mở HTTP và mở index.html trực tiếp, network tắt"
+  },
+  {
+    "id": "IT-REPORT-03",
+    "suite": "integration",
+    "name": "Trước, đúng, sau expires_at; cập nhật report sau review"
+  },
+  {
+    "id": "IT-REPORT-04",
+    "suite": "integration",
+    "name": "Direct image URL sau hạn; cleanup chạy lại, xóa dở rồi crash"
+  },
+  {
+    "id": "IT-REPORT-05",
+    "suite": "integration",
+    "name": "Máy tắt khi hết hạn, startup lại; bản copy ngoài vùng quản lý"
+  },
+  {
+    "id": "IT-SEC-01",
+    "suite": "integration",
+    "name": "Filename/path traversal, artifact task khác, link đoán được"
+  },
+  {
+    "id": "IT-SEC-02",
+    "suite": "integration",
+    "name": "HTML/script trong field/filename/flag, URL ảnh ngoài allowlist"
+  },
+  {
+    "id": "IT-SEC-03",
+    "suite": "integration",
+    "name": "Tài liệu ghi chỉ dẫn approve/export/delete; giả reviewer trong payload; GET approve"
+  },
+  {
+    "id": "IT-SEC-04",
+    "suite": "integration",
+    "name": "Source retention chưa chốt nhưng cleanup report chạy"
+  },
+  {
+    "id": "LIVE-01",
+    "suite": "live",
+    "name": "DOC-REC-01"
+  },
+  {
+    "id": "LIVE-02",
+    "suite": "live",
+    "name": "DOC-REC-02"
+  },
+  {
+    "id": "LIVE-03",
+    "suite": "live",
+    "name": "DOC-REC-03"
+  },
+  {
+    "id": "LIVE-04",
+    "suite": "live",
+    "name": "DOC-DIS-01"
+  },
+  {
+    "id": "LIVE-05",
+    "suite": "live",
+    "name": "DOC-DIS-02"
+  },
+  {
+    "id": "LIVE-06",
+    "suite": "live",
+    "name": "DOC-DIS-03"
+  },
+  {
+    "id": "LIVE-07",
+    "suite": "live",
+    "name": "DOC-LAB-01"
+  },
+  {
+    "id": "LIVE-08",
+    "suite": "live",
+    "name": "DOC-LAB-02"
+  },
+  {
+    "id": "LIVE-09",
+    "suite": "live",
+    "name": "DOC-RX-01"
+  },
+  {
+    "id": "LIVE-10",
+    "suite": "live",
+    "name": "DOC-RX-02"
+  },
+  {
+    "id": "IT-TREPORT-01",
+    "suite": "integration",
+    "name": "Hợp nhất smoke/integration/live trong một run"
+  },
+  {
+    "id": "IT-TREPORT-02",
+    "suite": "integration",
+    "name": "Live đủ 10 docs, thiếu key hoặc chạy được một phần"
+  },
+  {
+    "id": "IT-TREPORT-03",
+    "suite": "integration",
+    "name": "Nhiều attempts, case lỗi, runner crash hoặc hai run cùng ID case"
+  },
+  {
+    "id": "IT-TREPORT-04",
+    "suite": "integration",
+    "name": "Mở offline, ảnh có/không có, script/secret trong lỗi"
+  },
+  {
+    "id": "IT-TREPORT-05",
+    "suite": "integration",
+    "name": "Hết hạn test report, cleanup và retry"
+  },
+  {
+    "id": "IT-MANUAL-01",
+    "suite": "integration",
+    "name": "Upload PDF/ảnh hợp lệ, invalid/oversize, polling và reload"
+  },
+  {
+    "id": "IT-MANUAL-02",
+    "suite": "integration",
+    "name": "Xem nhiều documents, fields/list items, crop/full-page và filter"
+  },
+  {
+    "id": "IT-MANUAL-03",
+    "suite": "integration",
+    "name": "Approve field đang low confidence sau kiểm tra nguồn hợp lệ"
+  },
+  {
+    "id": "IT-MANUAL-04",
+    "suite": "integration",
+    "name": "Edit → save draft → confirm correction, đổi tiếp field đã approve"
+  },
+  {
+    "id": "IT-MANUAL-05",
+    "suite": "integration",
+    "name": "Field approved nhưng segmentation/coverage chưa chắc; approve cả document"
+  },
+  {
+    "id": "IT-MANUAL-06",
+    "suite": "integration",
+    "name": "Hai tab/reviewer cùng revision, click đúp, thiếu quyền, giả actor"
+  },
+  {
+    "id": "IT-MANUAL-07",
+    "suite": "integration",
+    "name": "Review commit rồi reload/restart, report tạo lại hoặc report generation lỗi"
+  },
+  {
+    "id": "IT-MANUAL-08",
+    "suite": "integration",
+    "name": "Đếm calls khi approve/edit/poll, rerun riêng và xem automated report"
+  }
+]

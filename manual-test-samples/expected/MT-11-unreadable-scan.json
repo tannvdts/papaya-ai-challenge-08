@@ -1,0 +1,19 @@
+{
+  "id": "MT-11-unreadable-scan",
+  "title": "Scan hỏng/mờ nghiêm trọng",
+  "file": "MT-11-unreadable-scan.pdf",
+  "page_count": 1,
+  "document_types": [],
+  "risks": [
+    "unreadable document"
+  ],
+  "expected": {
+    "unreadable_fields": null,
+    "confidence_below": 0.5,
+    "source_image": true,
+    "review": true,
+    "decision": "Allow an unsupported/uncertain classification outcome; do not require a document type the pixels cannot justify. No hallucinated values."
+  },
+  "synthetic": true,
+  "image_only": true
+}

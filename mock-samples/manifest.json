@@ -1,0 +1,73 @@
+[
+  {
+    "id": "DOC-REC-01",
+    "file": "DOC-REC-01.pdf",
+    "truth": "DOC-REC-01.truth.json",
+    "type": "receipt",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-REC-02",
+    "file": "DOC-REC-02.pdf",
+    "truth": "DOC-REC-02.truth.json",
+    "type": "receipt",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-REC-03",
+    "file": "DOC-REC-03.pdf",
+    "truth": "DOC-REC-03.truth.json",
+    "type": "receipt",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-DIS-01",
+    "file": "DOC-DIS-01.pdf",
+    "truth": "DOC-DIS-01.truth.json",
+    "type": "discharge_summary",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-DIS-02",
+    "file": "DOC-DIS-02.pdf",
+    "truth": "DOC-DIS-02.truth.json",
+    "type": "discharge_summary",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-DIS-03",
+    "file": "DOC-DIS-03.pdf",
+    "truth": "DOC-DIS-03.truth.json",
+    "type": "discharge_summary",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-LAB-01",
+    "file": "DOC-LAB-01.pdf",
+    "truth": "DOC-LAB-01.truth.json",
+    "type": "lab_report",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-LAB-02",
+    "file": "DOC-LAB-02.pdf",
+    "truth": "DOC-LAB-02.truth.json",
+    "type": "lab_report",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-RX-01",
+    "file": "DOC-RX-01.pdf",
+    "truth": "DOC-RX-01.truth.json",
+    "type": "prescription",
+    "synthetic": true
+  },
+  {
+    "id": "DOC-RX-02",
+    "file": "DOC-RX-02.pdf",
+    "truth": "DOC-RX-02.truth.json",
+    "type": "prescription",
+    "synthetic": true,
+    "limitations": "Missing dosage fixture, not evidence of real handwriting recognition"
+  }
+]

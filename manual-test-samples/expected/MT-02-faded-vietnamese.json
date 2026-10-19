@@ -1,0 +1,26 @@
+{
+  "id": "MT-02-faded-vietnamese",
+  "title": "Scan nhạt, tiếng Việt, ngày mơ hồ",
+  "file": "MT-02-faded-vietnamese.pdf",
+  "page_count": 1,
+  "document_types": [
+    "receipt"
+  ],
+  "risks": [
+    "Vietnamese",
+    "low contrast",
+    "ambiguous date"
+  ],
+  "expected": {
+    "date": {
+      "raw": "03/04/2026",
+      "normalized": null,
+      "confidence_below": 0.5,
+      "review": true,
+      "source_image": true
+    },
+    "patient": "Nguyễn An Demo"
+  },
+  "synthetic": true,
+  "image_only": true
+}

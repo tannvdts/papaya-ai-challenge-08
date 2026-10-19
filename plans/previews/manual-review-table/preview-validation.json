@@ -1,0 +1,13 @@
+{
+  "type": "Interactive HTML design prototype; no production/API writes",
+  "checks": {
+    "table_rows": 8,
+    "initial_confirmation_buttons": 1,
+    "doctor_name_initial_confirmation_buttons": 0,
+    "confirmation_removed_after_review": true,
+    "optional_edit_requires_draft_before_confirmation": true,
+    "draft_blocks_export": true,
+    "json_open_and_sync": true,
+    "browser_errors": []
+  }
+}

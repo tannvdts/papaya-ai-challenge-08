@@ -1,0 +1,66 @@
+{
+  "name": "medical-document-extractor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start:prod": "node --env-file-if-exists=.env dist/apps/backend/main.js",
+    "start:dev": "node --import tsx --env-file-if-exists=.env apps/backend/main.ts",
+    "mock-samples:generate": "npm run build && node dist/scripts/generate-mock-samples.js",
+    "test": "npm run build && node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "test:smoke": "npm run build && node --env-file-if-exists=.env dist/tests/run.js smoke",
+    "test:integration": "npm run build && node --env-file-if-exists=.env dist/tests/run.js integration",
+    "test:integration:live": "npm run build && node --env-file-if-exists=.env dist/tests/run.js live",
+    "test:e2e": "npm run build && node dist/tests/run.js e2e",
+    "test:report": "npm run build && node --env-file-if-exists=.env dist/scripts/report.js",
+    "mock-samples:extract:mock": "npm run build && node dist/scripts/export-mock-samples.js",
+    "manual-test-samples:generate": "node scripts/generate-manual-test-samples.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@napi-rs/canvas": "1.0.11",
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/mongoose": "^11.0.0",
+    "@nestjs/platform-express": "^11.1.0",
+    "@nestjs/terminus": "^11.0.0",
+    "decimal.js": "^10.6.0",
+    "dotenv": "^17.0.0",
+    "handlebars": "^4.7.8",
+    "mongoose": "^8.19.0",
+    "openai": "^6.0.0",
+    "pdfjs-dist": "^6.4.299",
+    "pdfkit": "^0.17.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "sharp": "^0.35.5",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "@types/pdfkit": "^0.17.0",
+    "@types/supertest": "^6.0.0",
+    "jest": "^30.0.0",
+    "playwright": "^1.56.0",
+    "prettier": "3.9.10",
+    "supertest": "^7.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/dist/tests/*.spec.js"
+    ],
+    "transform": {}
+  }
+}

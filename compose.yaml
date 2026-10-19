@@ -1,0 +1,67 @@
+services:
+  mongodb:
+    image: mongo:7
+    restart: unless-stopped
+    command: ['mongod', '--replSet', 'rs0', '--bind_ip_all', '--port', '27019']
+    ports: ['127.0.0.1:${MONGODB_EXPOSE_PORT:-27019}:27019']
+    volumes: ['mongo-data:/data/db']
+    healthcheck:
+      test:
+        [
+          'CMD-SHELL',
+          'mongosh --port 27019 --quiet --eval ''try { rs.status() } catch(e) { rs.initiate({_id: "rs0", members: [{_id: 0, host: "localhost:27019"}]}) }; if (!db.hello().isWritablePrimary) quit(1)''',
+        ]
+      interval: 5s
+      timeout: 10s
+      retries: 20
+  backend:
+    build:
+      context: .
+      target: runtime
+    restart: unless-stopped
+    env_file: ${APP_ENV_FILE:-.env}
+    environment:
+      BIND_HOST: 0.0.0.0
+      APP_PORT: ${APP_PORT:-4000}
+      APP_URL: ${APP_URL:-http://127.0.0.1:${APP_PORT:-4000}}
+      STORAGE_ROOT: /app/runtime
+      MONGODB_URI: mongodb://mongodb:27019/medical_extractor?replicaSet=rs0&directConnection=true
+    ports: ['${APP_EXPOSE_HOST:-127.0.0.1}:${APP_PORT:-4000}:${APP_PORT:-4000}']
+    volumes: ['app-data:/app/runtime']
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '--input-type=module',
+          '-e',
+          "const r=await fetch('http://127.0.0.1:'+process.env.APP_PORT+'/health'); const h=await r.json(); if(!h.capabilities?.review) process.exit(1)",
+        ]
+      interval: 10s
+      timeout: 8s
+      start_period: 90s
+      retries: 6
+  tests:
+    profiles: ['test']
+    build:
+      context: .
+      target: test
+    environment:
+      AI_MODE: mock
+      MONGODB_URI: mongodb://mongodb:27019/medical_extractor?replicaSet=rs0&directConnection=true
+      TEST_MONGODB_URI: mongodb://mongodb:27019/DB?replicaSet=rs0&directConnection=true
+      STORAGE_ROOT: /app/runtime
+      REPORT_ROOT: /app/runtime
+      TEST_RUN_ID: ${TEST_RUN_ID:-docker-local}
+      REPORT_BASE_URL: ${APP_URL:-http://127.0.0.1:${APP_PORT:-4000}}
+    volumes: ['app-data:/app/runtime']
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    command: ['npm', 'run', 'test:smoke']
+volumes:
+  app-data:
+  mongo-data:

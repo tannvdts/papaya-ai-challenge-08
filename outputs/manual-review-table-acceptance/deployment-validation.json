@@ -1,0 +1,16 @@
+{
+  "artifact": "Final Docker runtime image (includes table JS/CSS, audit snapshot guard and mock-samples)",
+  "runtime_image": "sha256:56de4e5f971a260f274bbb3eefea0a5dcf1d79c09e5b502c9a2c7a551fa745f7",
+  "environment": "Isolated synthetic mock task; no user task changed",
+  "port": 4128,
+  "doctor_confirmation_buttons": 0,
+  "date_confirmation_buttons_before": 1,
+  "buttons_after_review": 0,
+  "invalid_optional_approve_http": 409,
+  "ready_after_mandatory_review": true,
+  "ai_confidence_unchanged": true,
+  "json_updated": true,
+  "screenshots": 3,
+  "browser_errors": [],
+  "openai_calls": 0
+}

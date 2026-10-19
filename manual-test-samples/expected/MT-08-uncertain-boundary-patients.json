@@ -1,0 +1,25 @@
+{
+  "id": "MT-08-uncertain-boundary-patients",
+  "title": "Hai tài liệu trên một trang, che một phần danh tính",
+  "file": "MT-08-uncertain-boundary-patients.pdf",
+  "page_count": 1,
+  "document_types": [
+    "receipt",
+    "lab_report"
+  ],
+  "risks": [
+    "same-page segmentation",
+    "uncertain patient boundary"
+  ],
+  "expected": {
+    "intended_document_count": 2,
+    "intended_patients": [
+      "Demo Patient A01",
+      "Demo Patient B02"
+    ],
+    "decision": "If boundaries or patient identity cannot be established from visible pixels, lower segmentation confidence below 0.5, retain source and require structural review. Never assert the occluded identity from this sidecar.",
+    "exact_count_not_acceptance_requirement_when_ambiguous": true
+  },
+  "synthetic": true,
+  "image_only": true
+}

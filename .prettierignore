@@ -1,0 +1,22 @@
+# Dependencies and generated/build/runtime artifacts
+node_modules/
+dist/
+runtime/
+outputs/
+work/
+coverage/
+test-results/
+playwright-report/
+
+# Synced references, fixtures and archived design previews
+sources/
+mock-samples/
+manual-test-samples/
+plans/previews/
+
+# Secrets and prose/prompts are not part of the code formatting scope
+.env
+.env.*
+**/*.md
+**/*.txt
+package-lock.json

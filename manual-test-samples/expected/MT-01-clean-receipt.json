@@ -1,0 +1,26 @@
+{
+  "id": "MT-01-clean-receipt",
+  "title": "Baseline: hóa đơn rõ, thuế/giảm giá/hoàn tiền/dòng 0",
+  "file": "MT-01-clean-receipt.pdf",
+  "page_count": 1,
+  "document_types": [
+    "receipt"
+  ],
+  "risks": [
+    "date review",
+    "tax/discount/refund/zero"
+  ],
+  "expected": {
+    "document_count": 1,
+    "patient": "Demo Patient A01",
+    "currency": "USD",
+    "grand_total": "150.00",
+    "tax": "15.00",
+    "discount": "10.00",
+    "refund": "5.00",
+    "zero_line": true,
+    "arithmetic": "100+50+0+15-10-5=150"
+  },
+  "synthetic": true,
+  "image_only": true
+}

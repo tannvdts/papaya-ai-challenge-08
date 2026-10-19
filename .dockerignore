@@ -1,0 +1,11 @@
+node_modules
+dist
+runtime
+outputs
+work
+.env
+.git
+
+.env.*
+!.env.example
+manual-test-samples.zip

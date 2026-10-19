@@ -1,0 +1,1528 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Test report acceptance-20261019</title><style>body{font:16px system-ui;margin:0;background:#f3f5f8;color:#142235}main{max-width:1200px;margin:auto;padding:28px}h1{font-size:30px}article,section{background:white;padding:20px;border-radius:12px;margin:16px 0}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #ddd;text-align:left;padding:10px;vertical-align:top;overflow-wrap:anywhere}pre{white-space:pre-wrap}img{max-width:320px;max-height:220px}a{color:#135fbd}button,input,select,textarea{font:inherit;padding:8px;margin:4px}button{cursor:pointer;background:#eaf1ff;border:1px solid #acc5ee;border-radius:5px}.badge{padding:4px 8px;border-radius:4px;display:inline-block}.very-low,.FAIL{background:#8b1522;color:white}.low{background:#f9c6c6}.medium,.BLOCKED{background:#ffe2a3}.high{background:#caf0ce}.very-high,.PASS{background:#146b36;color:white}.SKIPPED,.NOT_RUN,.RUNNING{background:#e4e7ec}.muted{color:#64748b}.error{color:#9e1b26}.row{display:flex;gap:16px;flex-wrap:wrap}.field{border-left:4px solid #b3c9e2;padding:14px;margin:12px 0}label{display:block}details{margin:12px 0}small{display:block}.summary{font-size:18px}</style><main><h1>Test results — acceptance-20261019</h1><p>Generated 2026-10-19T07:15:15.527Z · expires 2026-11-18T07:12:41.973Z</p><pre>{
+  &quot;PASS&quot;: 85,
+  &quot;SKIPPED&quot;: 10
+}</pre><p>PASS = assertions executed successfully. SKIPPED/BLOCKED/NOT_RUN are not passed. Confidence and test status are different measures.</p><label>Filter <input id="filter" placeholder="ID, suite, status or text"></label><article><h2>smoke</h2><details class="case"><summary><span class="badge PASS">PASS</span> SM-01 — Khởi động bằng env hợp lệ, Reader fake chủ động</summary><p>smoke · 11 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 14,
+  &quot;at&quot;: &quot;2026-10-19T07:12:40.013Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 11,
+  &quot;at&quot;: &quot;2026-10-19T07:13:55.398Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-02 — MCP initialize/list/call</summary><p>smoke · 5 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 6,
+  &quot;at&quot;: &quot;2026-10-19T07:12:40.019Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 5,
+  &quot;at&quot;: &quot;2026-10-19T07:13:55.404Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-03 — GET live và readiness với cấu hình openai hợp lệ nhưng chưa verify</summary><p>smoke · 4 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 4,
+  &quot;at&quot;: &quot;2026-10-19T07:12:40.023Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 4,
+  &quot;at&quot;: &quot;2026-10-19T07:13:55.408Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-04 — Upload một receipt PDF, fake Reader trả kết quả chuẩn</summary><p>smoke · 382 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;FAIL&quot;,
+  &quot;details&quot;: {
+    &quot;message&quot;: &quot;INVALID_TOOL_INPUT&quot;,
+    &quot;stack&quot;: [
+      &quot;Error: INVALID_TOOL_INPUT&quot;,
+      &quot;    at Tools.call (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/packages/mcp-client/index.js:41:19)&quot;,
+      &quot;    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)&quot;,
+      &quot;    at async tests.SM-04 (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:81:40)&quot;,
+      &quot;    at async file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:299:21&quot;
+    ]
+  },
+  &quot;duration_ms&quot;: 445,
+  &quot;at&quot;: &quot;2026-10-19T07:12:40.469Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 382,
+  &quot;at&quot;: &quot;2026-10-19T07:13:55.790Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-05 — Upload một ảnh prescription</summary><p>smoke · 27 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 64,
+  &quot;at&quot;: &quot;2026-10-19T07:12:40.537Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 27,
+  &quot;at&quot;: &quot;2026-10-19T07:13:55.818Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-06 — Composite có hai tài liệu khác loại</summary><p>smoke · 251 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;FAIL&quot;,
+  &quot;details&quot;: {
+    &quot;message&quot;: &quot;INVALID_TOOL_INPUT&quot;,
+    &quot;stack&quot;: [
+      &quot;Error: INVALID_TOOL_INPUT&quot;,
+      &quot;    at Tools.call (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/packages/mcp-client/index.js:41:19)&quot;,
+      &quot;    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)&quot;,
+      &quot;    at async tests.SM-06 (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:83:152)&quot;,
+      &quot;    at async file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:299:21&quot;
+    ]
+  },
+  &quot;duration_ms&quot;: 283,
+  &quot;at&quot;: &quot;2026-10-19T07:12:40.820Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 251,
+  &quot;at&quot;: &quot;2026-10-19T07:13:56.069Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-07 — Một field có confidence 0.49</summary><p>smoke · 186 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;FAIL&quot;,
+  &quot;details&quot;: {
+    &quot;message&quot;: &quot;INVALID_TOOL_INPUT&quot;,
+    &quot;stack&quot;: [
+      &quot;Error: INVALID_TOOL_INPUT&quot;,
+      &quot;    at Tools.call (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/packages/mcp-client/index.js:41:19)&quot;,
+      &quot;    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)&quot;,
+      &quot;    at async tests.SM-07 (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:84:114)&quot;,
+      &quot;    at async file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:299:21&quot;
+    ]
+  },
+  &quot;duration_ms&quot;: 210,
+  &quot;at&quot;: &quot;2026-10-19T07:12:41.030Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 186,
+  &quot;at&quot;: &quot;2026-10-19T07:13:56.256Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-08 — Ngày/cờ confidence cao chưa confirm</summary><p>smoke · 235 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;FAIL&quot;,
+  &quot;details&quot;: {
+    &quot;message&quot;: &quot;INVALID_TOOL_INPUT&quot;,
+    &quot;stack&quot;: [
+      &quot;Error: INVALID_TOOL_INPUT&quot;,
+      &quot;    at Tools.call (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/packages/mcp-client/index.js:41:19)&quot;,
+      &quot;    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)&quot;,
+      &quot;    at async readyTask (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:70:38)&quot;,
+      &quot;    at async tests.SM-08 (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:85:42)&quot;
+    ]
+  },
+  &quot;duration_ms&quot;: 237,
+  &quot;at&quot;: &quot;2026-10-19T07:12:41.272Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 235,
+  &quot;at&quot;: &quot;2026-10-19T07:13:56.492Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-09 — Tạo HTML và mở trực tiếp offline</summary><p>smoke · 6 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;FAIL&quot;,
+  &quot;details&quot;: {
+    &quot;message&quot;: &quot;INVALID_TOOL_INPUT&quot;,
+    &quot;stack&quot;: [
+      &quot;Error: INVALID_TOOL_INPUT&quot;,
+      &quot;    at Tools.call (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/packages/mcp-client/index.js:41:19)&quot;,
+      &quot;    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)&quot;,
+      &quot;    at async tests.SM-09 (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:86:51)&quot;,
+      &quot;    at async file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:299:21&quot;
+    ]
+  },
+  &quot;duration_ms&quot;: 258,
+  &quot;at&quot;: &quot;2026-10-19T07:12:41.530Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 6,
+  &quot;at&quot;: &quot;2026-10-19T07:13:56.498Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-10 — Đồng hồ đến đúng expires_at</summary><p>smoke · 192 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;FAIL&quot;,
+  &quot;details&quot;: {
+    &quot;message&quot;: &quot;INVALID_TOOL_INPUT&quot;,
+    &quot;stack&quot;: [
+      &quot;Error: INVALID_TOOL_INPUT&quot;,
+      &quot;    at Tools.call (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/packages/mcp-client/index.js:41:19)&quot;,
+      &quot;    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)&quot;,
+      &quot;    at async tests.SM-10 (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:87:42)&quot;,
+      &quot;    at async file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:299:21&quot;
+    ]
+  },
+  &quot;duration_ms&quot;: 225,
+  &quot;at&quot;: &quot;2026-10-19T07:12:41.756Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 192,
+  &quot;at&quot;: &quot;2026-10-19T07:13:56.690Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-11 — MCP ngắt hoặc MongoDB down rồi phục hồi</summary><p>smoke · 8 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 8,
+  &quot;at&quot;: &quot;2026-10-19T07:12:41.764Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 8,
+  &quot;at&quot;: &quot;2026-10-19T07:13:56.698Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> SM-12 — Poll health + validate/crop/report/review</summary><p>smoke · 231 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;FAIL&quot;,
+  &quot;details&quot;: {
+    &quot;message&quot;: &quot;INVALID_TOOL_INPUT&quot;,
+    &quot;stack&quot;: [
+      &quot;Error: INVALID_TOOL_INPUT&quot;,
+      &quot;    at Tools.call (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/packages/mcp-client/index.js:41:19)&quot;,
+      &quot;    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)&quot;,
+      &quot;    at async tests.SM-12 (file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:90:42)&quot;,
+      &quot;    at async file:///Users/tannguyen/Documents/Codex/2026-10-19/https-github-com-papaya-insurtech-pumpkin/dist/tests/run.js:299:21&quot;
+    ]
+  },
+  &quot;duration_ms&quot;: 207,
+  &quot;at&quot;: &quot;2026-10-19T07:12:41.971Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 231,
+  &quot;at&quot;: &quot;2026-10-19T07:13:56.929Z&quot;
+}</pre></details></article><article><h2>integration</h2><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-01 — 10 baseline qua pipeline nội bộ thật, fake Reader dựa trên từng ground truth</summary><p>integration · 2140 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1994,
+  &quot;at&quot;: &quot;2026-10-19T07:14:02.137Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 2140,
+  &quot;at&quot;: &quot;2026-10-19T07:14:47.382Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-02 — Cùng file có receipt, lab, prescription</summary><p>integration · 246 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 222,
+  &quot;at&quot;: &quot;2026-10-19T07:14:02.360Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 246,
+  &quot;at&quot;: &quot;2026-10-19T07:14:47.629Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-03 — Hai receipts cùng loại, khác bệnh nhân</summary><p>integration · 233 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 245,
+  &quot;at&quot;: &quot;2026-10-19T07:14:02.605Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 233,
+  &quot;at&quot;: &quot;2026-10-19T07:14:47.863Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-04 — Một hóa đơn qua nhiều trang, lặp header và có tổng cuối</summary><p>integration · 208 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 194,
+  &quot;at&quot;: &quot;2026-10-19T07:14:02.799Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 208,
+  &quot;at&quot;: &quot;2026-10-19T07:14:48.071Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-05 — Hai biên lai trên cùng trang</summary><p>integration · 223 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 209,
+  &quot;at&quot;: &quot;2026-10-19T07:14:03.009Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 223,
+  &quot;at&quot;: &quot;2026-10-19T07:14:48.294Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-06 — Không rõ boundaries/patient hoặc trang ngoài bốn loại</summary><p>integration · 171 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 181,
+  &quot;at&quot;: &quot;2026-10-19T07:14:03.190Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 171,
+  &quot;at&quot;: &quot;2026-10-19T07:14:48.465Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-07 — Trang/chunk thiếu, vùng chưa giải thích hoặc overlap</summary><p>integration · 268 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 269,
+  &quot;at&quot;: &quot;2026-10-19T07:14:03.460Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 268,
+  &quot;at&quot;: &quot;2026-10-19T07:14:48.734Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-08 — PDF text, scan, ảnh xoay, chữ nhỏ/mờ; text layer sai thứ tự</summary><p>integration · 224 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 270,
+  &quot;at&quot;: &quot;2026-10-19T07:14:03.730Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 224,
+  &quot;at&quot;: &quot;2026-10-19T07:14:48.959Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-09 — Tiếng Việt có dấu, Anh, chữ ngoài Latin, mixed language</summary><p>integration · 224 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 186,
+  &quot;at&quot;: &quot;2026-10-19T07:14:03.917Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 224,
+  &quot;at&quot;: &quot;2026-10-19T07:14:49.184Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-10 — Viết tay rõ/khó; trường không đọc được so với không tồn tại</summary><p>integration · 159 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 166,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.083Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 159,
+  &quot;at&quot;: &quot;2026-10-19T07:14:49.343Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-11 — Bbox ngoài ảnh, sai trang, tọa độ sau rotate/scale</summary><p>integration · 199 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 161,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.244Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 199,
+  &quot;at&quot;: &quot;2026-10-19T07:14:49.543Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DOC-12 — PDF hỏng/mã hóa, file giả extension, quá dung lượng/trang, file rỗng</summary><p>integration · 21 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 14,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.258Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 21,
+  &quot;at&quot;: &quot;2026-10-19T07:14:49.564Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DATE-01 — Ngày DD/MM rõ như 23/04/2026</summary><p>integration · 184 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 158,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.417Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 184,
+  &quot;at&quot;: &quot;2026-10-19T07:14:49.748Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DATE-02 — 03/04/2026</summary><p>integration · 185 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 149,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.567Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 185,
+  &quot;at&quot;: &quot;2026-10-19T07:14:49.934Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DATE-03 — 03/03/2026, ngày không tồn tại, 29/02 năm nhuận/không nhuận</summary><p>integration · 0 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.567Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:49.935Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DATE-04 — Năm 2 chữ số, ngày chữ/ngôn ngữ khác, lịch chưa hỗ trợ, thiếu căn cứ</summary><p>integration · 1 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.568Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:49.936Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MONEY-01 — 1,234.56 theo format chung, currency rõ</summary><p>integration · 211 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 132,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.701Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 211,
+  &quot;at&quot;: &quot;2026-10-19T07:14:50.148Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MONEY-02 — 1.234,56; 1 234,56; 1,234 mơ hồ</summary><p>integration · 168 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 158,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.859Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 168,
+  &quot;at&quot;: &quot;2026-10-19T07:14:50.316Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MONEY-03 — Currency thiếu, ký hiệu $ không đủ phân biệt, nhiều currency</summary><p>integration · 0 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:04.859Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:50.317Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MONEY-04 — Dòng 0, discount, refund âm/ngoặc, thuế cấp dòng/toàn hóa đơn</summary><p>integration · 218 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 201,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.060Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 218,
+  &quot;at&quot;: &quot;2026-10-19T07:14:50.535Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MONEY-05 — Lệch ngay dưới/đúng/trên 5%; grand total 0 hoặc refund âm</summary><p>integration · 1 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.061Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:50.536Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MONEY-06 — Nhiều dòng thập phân, số lớn và vượt độ biểu diễn Decimal128</summary><p>integration · 0 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.061Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:50.536Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-FLAG-01 — normal/high/low, hoa/thường/khoảng trắng</summary><p>integration · 131 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 129,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.190Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 131,
+  &quot;at&quot;: &quot;2026-10-19T07:14:50.668Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-FLAG-02 — H/L/HH/LL/critical/dấu sao/màu</summary><p>integration · 175 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 168,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.358Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 175,
+  &quot;at&quot;: &quot;2026-10-19T07:14:50.843Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-FLAG-03 — Không ghi flag nhưng result ngoài reference range</summary><p>integration · 157 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 162,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.520Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 157,
+  &quot;at&quot;: &quot;2026-10-19T07:14:51.000Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-CONF-01 — Một field con/list item dưới 0.5, các field khác rất cao</summary><p>integration · 134 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 131,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.651Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 134,
+  &quot;at&quot;: &quot;2026-10-19T07:14:51.134Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-CONF-02 — 0, 0.1999, 0.2, 0.4999, 0.5, 0.7999, 0.8, 0.9499, 0.95, 1</summary><p>integration · 0 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.651Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:51.135Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-CONF-03 — NaN/null/ngoài 0–1, task rỗng, thiếu required field, field không áp dụng</summary><p>integration · 161 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 128,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.779Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 161,
+  &quot;at&quot;: &quot;2026-10-19T07:14:51.296Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-CONF-04 — Model trả 0.99 cho ngày mơ hồ/currency thiếu/flag ngoài chuẩn</summary><p>integration · 1 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.779Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:51.297Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MCP-01 — Input/output sai schema, thiếu tool/version, protocol output lẫn log</summary><p>integration · 1 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:05.780Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:51.298Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MCP-02 — MCP disconnect/timeout giữa call và commit, retry cùng operation ID</summary><p>integration · 752 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 674,
+  &quot;at&quot;: &quot;2026-10-19T07:14:06.455Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 752,
+  &quot;at&quot;: &quot;2026-10-19T07:14:52.050Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DB-01 — Review + audit + pointer transaction bị ngắt giữa chừng</summary><p>integration · 405 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 369,
+  &quot;at&quot;: &quot;2026-10-19T07:14:06.825Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 405,
+  &quot;at&quot;: &quot;2026-10-19T07:14:52.456Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DB-02 — Hai reviewer sửa cùng expected_revision; export cùng lúc</summary><p>integration · 213 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 251,
+  &quot;at&quot;: &quot;2026-10-19T07:14:07.076Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 213,
+  &quot;at&quot;: &quot;2026-10-19T07:14:52.669Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-DB-03 — Mongo down, không phải replica set hoặc transaction capability chưa sẵn sàng</summary><p>integration · 3420 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 3462,
+  &quot;at&quot;: &quot;2026-10-19T07:14:10.539Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 3420,
+  &quot;at&quot;: &quot;2026-10-19T07:14:56.089Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-WORK-01 — Hai worker claim, lease hết hạn, worker cũ trả kết quả muộn</summary><p>integration · 180 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;FAIL&quot;,
+  &quot;details&quot;: {
+    &quot;message&quot;: &quot;The input did not match the regular expression /LEASE_LOST/. Input:\n\n&#x27;Error: INVALID_TOOL_INPUT&#x27;\n&quot;,
+    &quot;stack&quot;: [
+      &quot;AssertionError [ERR_ASSERTION]: The input did not match the regular expression /LEASE_LOST/. Input:&quot;,
+      &quot;&quot;,
+      &quot;&#x27;Error: INVALID_TOOL_INPUT&#x27;&quot;,
+      &quot;&quot;,
+      &quot;    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)&quot;
+    ]
+  },
+  &quot;duration_ms&quot;: 185,
+  &quot;at&quot;: &quot;2026-10-19T07:14:10.725Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 180,
+  &quot;at&quot;: &quot;2026-10-19T07:14:56.269Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-WORK-02 — Crash sau ghi file trước DB hoặc sau DB trước publish artifact</summary><p>integration · 202 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 216,
+  &quot;at&quot;: &quot;2026-10-19T07:14:10.941Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 202,
+  &quot;at&quot;: &quot;2026-10-19T07:14:56.471Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-REVIEW-01 — Pending mandatory field nhưng gọi export trực tiếp/API/MCP</summary><p>integration · 169 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 267,
+  &quot;at&quot;: &quot;2026-10-19T07:14:11.208Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 169,
+  &quot;at&quot;: &quot;2026-10-19T07:14:56.641Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-REVIEW-02 — Confirm/correct đủ quyền và đúng revision</summary><p>integration · 174 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 232,
+  &quot;at&quot;: &quot;2026-10-19T07:14:11.440Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 174,
+  &quot;at&quot;: &quot;2026-10-19T07:14:56.815Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-REVIEW-03 — Rerun/sửa nguồn sau approve; approve trường thiếu bắt buộc downstream</summary><p>integration · 172 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 223,
+  &quot;at&quot;: &quot;2026-10-19T07:14:11.664Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 172,
+  &quot;at&quot;: &quot;2026-10-19T07:14:56.987Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-CACHE-01 — Upload cùng file lần hai; thay model/prompt/schema/input settings/quyền</summary><p>integration · 356 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 334,
+  &quot;at&quot;: &quot;2026-10-19T07:14:11.999Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 356,
+  &quot;at&quot;: &quot;2026-10-19T07:14:57.343Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-ENV-01 — Thiếu key/model trong openai mode; timeout/retry/budget sai; disabled/mock chủ động</summary><p>integration · 1 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:12.000Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1,
+  &quot;at&quot;: &quot;2026-10-19T07:14:57.344Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-ENV-02 — Đổi key/model/base URL/project/org, restart cùng build</summary><p>integration · 215 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 155,
+  &quot;at&quot;: &quot;2026-10-19T07:14:12.155Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 215,
+  &quot;at&quot;: &quot;2026-10-19T07:14:57.559Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-ENV-03 — MCP child spawn, health/report/log/error snapshots</summary><p>integration · 14 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 5,
+  &quot;at&quot;: &quot;2026-10-19T07:14:12.161Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 14,
+  &quot;at&quot;: &quot;2026-10-19T07:14:57.575Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-AI-01 — Provider trả valid, invalid schema, refusal, incomplete hoặc output bị cắt</summary><p>integration · 454 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 444,
+  &quot;at&quot;: &quot;2026-10-19T07:14:12.605Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 454,
+  &quot;at&quot;: &quot;2026-10-19T07:14:58.029Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-AI-02 — 401, 403, 429, 5xx, network timeout</summary><p>integration · 749 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 746,
+  &quot;at&quot;: &quot;2026-10-19T07:14:13.353Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 749,
+  &quot;at&quot;: &quot;2026-10-19T07:14:58.779Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-AI-03 — SDK retries + workflow retries, max calls/task, targeted reread</summary><p>integration · 697 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 721,
+  &quot;at&quot;: &quot;2026-10-19T07:14:14.076Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 697,
+  &quot;at&quot;: &quot;2026-10-19T07:14:59.477Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-AI-04 — Validation/crop/review/report/cleanup và confidence thấp</summary><p>integration · 270 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 218,
+  &quot;at&quot;: &quot;2026-10-19T07:14:14.295Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 270,
+  &quot;at&quot;: &quot;2026-10-19T07:14:59.750Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-HEALTH-01 — DB/MCP/storage/worker down và recovery, shutting down</summary><p>integration · 7 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 8,
+  &quot;at&quot;: &quot;2026-10-19T07:14:14.303Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 7,
+  &quot;at&quot;: &quot;2026-10-19T07:14:59.758Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-HEALTH-02 — Env valid nhưng chưa verify; cache health quá hạn; key/model đổi</summary><p>integration · 6 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 6,
+  &quot;at&quot;: &quot;2026-10-19T07:14:14.309Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 6,
+  &quot;at&quot;: &quot;2026-10-19T07:14:59.764Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-HEALTH-03 — Poll health nhiều lần, disabled AI nhưng review/report còn đủ dependency</summary><p>integration · 236 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 252,
+  &quot;at&quot;: &quot;2026-10-19T07:14:14.561Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 236,
+  &quot;at&quot;: &quot;2026-10-19T07:15:00.000Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-HEALTH-04 — Verify chủ động, thiếu quyền, cooldown/budget, lỗi provider</summary><p>integration · 3 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 4,
+  &quot;at&quot;: &quot;2026-10-19T07:14:14.565Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 3,
+  &quot;at&quot;: &quot;2026-10-19T07:15:00.004Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-REPORT-01 — N documents, danh sách dài, null/ứng viên, ảnh có/không có, nhiều ngôn ngữ</summary><p>integration · 212 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 196,
+  &quot;at&quot;: &quot;2026-10-19T07:14:14.761Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 212,
+  &quot;at&quot;: &quot;2026-10-19T07:15:00.216Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-REPORT-02 — Mở HTTP và mở index.html trực tiếp, network tắt</summary><p>integration · 202 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 194,
+  &quot;at&quot;: &quot;2026-10-19T07:14:14.956Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 202,
+  &quot;at&quot;: &quot;2026-10-19T07:15:00.419Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-REPORT-03 — Trước, đúng, sau expires_at; cập nhật report sau review</summary><p>integration · 233 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 214,
+  &quot;at&quot;: &quot;2026-10-19T07:14:15.170Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 233,
+  &quot;at&quot;: &quot;2026-10-19T07:15:00.652Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-REPORT-04 — Direct image URL sau hạn; cleanup chạy lại, xóa dở rồi crash</summary><p>integration · 177 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 169,
+  &quot;at&quot;: &quot;2026-10-19T07:14:15.340Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 177,
+  &quot;at&quot;: &quot;2026-10-19T07:15:00.829Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-REPORT-05 — Máy tắt khi hết hạn, startup lại; bản copy ngoài vùng quản lý</summary><p>integration · 194 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 185,
+  &quot;at&quot;: &quot;2026-10-19T07:14:15.525Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 194,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.023Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-SEC-01 — Filename/path traversal, artifact task khác, link đoán được</summary><p>integration · 161 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 154,
+  &quot;at&quot;: &quot;2026-10-19T07:14:15.680Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 161,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.185Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-SEC-02 — HTML/script trong field/filename/flag, URL ảnh ngoài allowlist</summary><p>integration · 211 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 188,
+  &quot;at&quot;: &quot;2026-10-19T07:14:15.868Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 211,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.397Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-SEC-03 — Tài liệu ghi chỉ dẫn approve/export/delete; giả reviewer trong payload; GET approve</summary><p>integration · 181 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 255,
+  &quot;at&quot;: &quot;2026-10-19T07:14:16.123Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 181,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.579Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-SEC-04 — Source retention chưa chốt nhưng cleanup report chạy</summary><p>integration · 177 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 164,
+  &quot;at&quot;: &quot;2026-10-19T07:14:16.288Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 177,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.757Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-TREPORT-01 — Hợp nhất smoke/integration/live trong một run</summary><p>integration · 9 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 9,
+  &quot;at&quot;: &quot;2026-10-19T07:14:16.297Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 9,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.766Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-TREPORT-02 — Live đủ 10 docs, thiếu key hoặc chạy được một phần</summary><p>integration · 3 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 5,
+  &quot;at&quot;: &quot;2026-10-19T07:14:16.303Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 3,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.769Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-TREPORT-03 — Nhiều attempts, case lỗi, runner crash hoặc hai run cùng ID case</summary><p>integration · 3 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 5,
+  &quot;at&quot;: &quot;2026-10-19T07:14:16.309Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 3,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.773Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-TREPORT-04 — Mở offline, ảnh có/không có, script/secret trong lỗi</summary><p>integration · 4 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 3,
+  &quot;at&quot;: &quot;2026-10-19T07:14:16.312Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 4,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.777Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-TREPORT-05 — Hết hạn test report, cleanup và retry</summary><p>integration · 6 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 8,
+  &quot;at&quot;: &quot;2026-10-19T07:14:16.321Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 6,
+  &quot;at&quot;: &quot;2026-10-19T07:15:01.783Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MANUAL-01 — Upload PDF/ảnh hợp lệ, invalid/oversize, polling và reload</summary><p>integration · 2863 ms</p><pre>{
+  &quot;browser&quot;: &quot;Chromium&quot;,
+  &quot;flow&quot;: &quot;upload, wait, result, approve date, ready, reload&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 1107,
+  &quot;at&quot;: &quot;2026-10-19T07:14:17.428Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 641,
+  &quot;at&quot;: &quot;2026-10-19T07:15:02.424Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;browser&quot;: &quot;Chromium&quot;,
+    &quot;flow&quot;: &quot;upload, wait, result, approve date, ready, reload&quot;
+  },
+  &quot;duration_ms&quot;: 2863,
+  &quot;at&quot;: &quot;2026-10-19T07:15:10.529Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MANUAL-02 — Xem nhiều documents, fields/list items, crop/full-page và filter</summary><p>integration · 2864 ms</p><pre>{
+  &quot;browser&quot;: &quot;Chromium&quot;,
+  &quot;flow&quot;: &quot;field/source rendering&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 181,
+  &quot;at&quot;: &quot;2026-10-19T07:14:17.610Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 137,
+  &quot;at&quot;: &quot;2026-10-19T07:15:02.562Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;browser&quot;: &quot;Chromium&quot;,
+    &quot;flow&quot;: &quot;field/source rendering&quot;
+  },
+  &quot;duration_ms&quot;: 2864,
+  &quot;at&quot;: &quot;2026-10-19T07:15:10.530Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MANUAL-03 — Approve field đang low confidence sau kiểm tra nguồn hợp lệ</summary><p>integration · 166 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 206,
+  &quot;at&quot;: &quot;2026-10-19T07:14:17.817Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 166,
+  &quot;at&quot;: &quot;2026-10-19T07:15:02.729Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MANUAL-04 — Edit → save draft → confirm correction, đổi tiếp field đã approve</summary><p>integration · 277 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 284,
+  &quot;at&quot;: &quot;2026-10-19T07:14:18.102Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 277,
+  &quot;at&quot;: &quot;2026-10-19T07:15:03.006Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MANUAL-05 — Field approved nhưng segmentation/coverage chưa chắc; approve cả document</summary><p>integration · 237 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 224,
+  &quot;at&quot;: &quot;2026-10-19T07:14:18.326Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 237,
+  &quot;at&quot;: &quot;2026-10-19T07:15:03.244Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MANUAL-06 — Hai tab/reviewer cùng revision, click đúp, thiếu quyền, giả actor</summary><p>integration · 216 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 203,
+  &quot;at&quot;: &quot;2026-10-19T07:14:18.529Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 216,
+  &quot;at&quot;: &quot;2026-10-19T07:15:03.462Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MANUAL-07 — Review commit rồi reload/restart, report tạo lại hoặc report generation lỗi</summary><p>integration · 211 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 237,
+  &quot;at&quot;: &quot;2026-10-19T07:14:18.767Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 211,
+  &quot;at&quot;: &quot;2026-10-19T07:15:03.674Z&quot;
+}</pre></details><details class="case"><summary><span class="badge PASS">PASS</span> IT-MANUAL-08 — Đếm calls khi approve/edit/poll, rerun riêng và xem automated report</summary><p>integration · 216 ms</p><pre>{
+  &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 212,
+  &quot;at&quot;: &quot;2026-10-19T07:14:18.979Z&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;details&quot;: {
+    &quot;assertions&quot;: &quot;Executed against local components; see tests/run.ts&quot;
+  },
+  &quot;duration_ms&quot;: 216,
+  &quot;at&quot;: &quot;2026-10-19T07:15:03.890Z&quot;
+}</pre></details></article><article><h2>live</h2><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-01 — DOC-REC-01</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.417Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-02 — DOC-REC-02</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.417Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-03 — DOC-REC-03</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.418Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-04 — DOC-DIS-01</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.418Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-05 — DOC-DIS-02</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.419Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-06 — DOC-DIS-03</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.419Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-07 — DOC-LAB-01</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.420Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-08 — DOC-LAB-02</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.420Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-09 — DOC-RX-01</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.420Z&quot;
+}</pre></details><details class="case"><summary><span class="badge SKIPPED">SKIPPED</span> LIVE-10 — DOC-RX-02</summary><p>live · 0 ms</p><pre>{
+  &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+}</pre><pre>{
+  &quot;status&quot;: &quot;SKIPPED&quot;,
+  &quot;details&quot;: {
+    &quot;reason&quot;: &quot;OPENAI_API_KEY / OPENAI_MODEL not configured. No provider requests made.&quot;
+  },
+  &quot;duration_ms&quot;: 0,
+  &quot;at&quot;: &quot;2026-10-19T07:15:13.421Z&quot;
+}</pre></details></article><article><h2>e2e</h2></article><script>document.getElementById('filter').oninput=function(){const q=this.value.toLowerCase();document.querySelectorAll('.case').forEach(e=>e.hidden=!e.textContent.toLowerCase().includes(q))}</script></main></html>

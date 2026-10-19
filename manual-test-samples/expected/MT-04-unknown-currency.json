@@ -1,0 +1,23 @@
+{
+  "id": "MT-04-unknown-currency",
+  "title": "Ký hiệu $ không xác định đơn vị tiền",
+  "file": "MT-04-unknown-currency.pdf",
+  "page_count": 1,
+  "document_types": [
+    "receipt"
+  ],
+  "risks": [
+    "unknown currency"
+  ],
+  "expected": {
+    "currency": {
+      "raw": "$",
+      "confidence_below": 0.5,
+      "review": true,
+      "source_image": true
+    },
+    "no_currency_guess": true
+  },
+  "synthetic": true,
+  "image_only": true
+}

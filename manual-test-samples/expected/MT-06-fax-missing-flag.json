@@ -1,0 +1,21 @@
+{
+  "id": "MT-06-fax-missing-flag",
+  "title": "Bản fax, thiếu cờ sodium",
+  "file": "MT-06-fax-missing-flag.pdf",
+  "page_count": 1,
+  "document_types": [
+    "lab_report"
+  ],
+  "risks": [
+    "fax",
+    "missing field"
+  ],
+  "expected": {
+    "sodium_flag": null,
+    "missing_flag_confidence_below": 0.5,
+    "never_infer_normal": true,
+    "review": true
+  },
+  "synthetic": true,
+  "image_only": true
+}

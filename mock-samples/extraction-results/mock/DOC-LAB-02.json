@@ -1,0 +1,850 @@
+{
+  "mode": "mock; NOT OpenAI benchmark",
+  "_id": "6ad5c3976180acd287548126",
+  "task_id": "10c571a9-7523-4f47-9600-497f3b797cec",
+  "revision": 1,
+  "status": "awaiting_review",
+  "created_at": "2026-10-19T07:15:35.243Z",
+  "filename": "DOC-LAB-02.pdf",
+  "source_hash": "e98a44d456afaea1891829bc05faedabdb3a8c6abd286da86aa11a543de2a9e8",
+  "coverage": true,
+  "confidence": 0,
+  "final_confidence": 0,
+  "lease_until": "2026-10-19T07:17:05.900Z",
+  "checkpoint": "extracted",
+  "pages": [
+    {
+      "number": 1,
+      "image": "page-1.png",
+      "width": 1012,
+      "height": 1432,
+      "text": "LAB REPORT \nSYNTHETIC TRAINING FIXTURE — NOT A REAL PATIENT / NOT MEDICAL ADVICE \ndocument_type: lab_report\nDocument reference DOC-LAB-02\nlab_name: Lotus Laboratory\npatient_name: Synthetic Patient L2\ndate: 23/04/2026\ntests.0.test_name: Glucose\ntests.0.result: 110\ntests.0.unit: mg/dL\ntests.0.reference_range: 70-100\ntests.0.flag: HH\ntests.1.test_name: Sodium\ntests.1.result: 140\ntests.1.unit: mmol/L\ntests.1.reference_range: 135-145\ntests.1.flag: [not visible] "
+    }
+  ],
+  "unsupported_pages": [],
+  "report_created_at": "2026-10-19T07:15:36.070Z",
+  "report_error": null,
+  "report_expires_at": "2026-11-18T07:15:36.056Z",
+  "report_revision": 1,
+  "scan_task_id": "10c571a9-7523-4f47-9600-497f3b797cec",
+  "documents": [
+    {
+      "document_type": "lab_report",
+      "classification_confidence": 0.95,
+      "segmentation_confidence": 0.9,
+      "pages": [
+        1
+      ],
+      "fields": {
+        "lab_name": {
+          "value": "Lotus Laboratory",
+          "confidence": 0.9,
+          "raw_value": "Lotus Laboratory",
+          "candidate_value": null,
+          "final_value": "Lotus Laboratory",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "patient_name": {
+          "value": "Synthetic Patient L2",
+          "confidence": 0.9,
+          "raw_value": "Synthetic Patient L2",
+          "candidate_value": null,
+          "final_value": "Synthetic Patient L2",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "date": {
+          "value": "2026-04-23",
+          "confidence": 0.9,
+          "raw_value": "23/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-23",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests": {
+          "value": [
+            {
+              "test_name": {
+                "value": "Glucose",
+                "confidence": 0.9,
+                "raw_value": "Glucose",
+                "candidate_value": null,
+                "final_value": "Glucose",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-3.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "result": {
+                "value": "110",
+                "confidence": 0.9,
+                "raw_value": "110",
+                "candidate_value": null,
+                "final_value": "110",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-4.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "unit": {
+                "value": "mg/dL",
+                "confidence": 0.9,
+                "raw_value": "mg/dL",
+                "candidate_value": null,
+                "final_value": "mg/dL",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-5.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "reference_range": {
+                "value": "70-100",
+                "confidence": 0.9,
+                "raw_value": "70-100",
+                "candidate_value": null,
+                "final_value": "70-100",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-6.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "flag": {
+                "value": null,
+                "confidence": 0.49,
+                "raw_value": "HH",
+                "candidate_value": "HH",
+                "final_value": null,
+                "final_confidence": 0.49,
+                "review_status": "pending",
+                "requires_review": true,
+                "warnings": [
+                  "FLAG_OUTSIDE_ENUM"
+                ],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-7.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              }
+            },
+            {
+              "test_name": {
+                "value": "Sodium",
+                "confidence": 0.9,
+                "raw_value": "Sodium",
+                "candidate_value": null,
+                "final_value": "Sodium",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-8.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "result": {
+                "value": "140",
+                "confidence": 0.9,
+                "raw_value": "140",
+                "candidate_value": null,
+                "final_value": "140",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-9.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "unit": {
+                "value": "mmol/L",
+                "confidence": 0.9,
+                "raw_value": "mmol/L",
+                "candidate_value": null,
+                "final_value": "mmol/L",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-10.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "reference_range": {
+                "value": "135-145",
+                "confidence": 0.9,
+                "raw_value": "135-145",
+                "candidate_value": null,
+                "final_value": "135-145",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-11.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "flag": {
+                "value": null,
+                "confidence": 0,
+                "raw_value": null,
+                "candidate_value": null,
+                "final_value": null,
+                "final_confidence": 0,
+                "review_status": "pending",
+                "requires_review": true,
+                "warnings": [
+                  "MISSING_FIELD"
+                ]
+              }
+            }
+          ],
+          "confidence": 0,
+          "final_confidence": 0
+        }
+      },
+      "document_id": "5cc43bc2-0d3e-4d60-bcc4-cd745e979a59",
+      "structure_confirmed": false,
+      "confidence": 0,
+      "final_confidence": 0,
+      "validation_errors": [],
+      "field_list": [
+        {
+          "path": "lab_name",
+          "raw_value": "Lotus Laboratory",
+          "value": "Lotus Laboratory",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Lotus Laboratory",
+          "candidate_value": null,
+          "normalized_value": "Lotus Laboratory",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "patient_name",
+          "raw_value": "Synthetic Patient L2",
+          "value": "Synthetic Patient L2",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Synthetic Patient L2",
+          "candidate_value": null,
+          "normalized_value": "Synthetic Patient L2",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "date",
+          "raw_value": "23/04/2026",
+          "value": "23/04/2026",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "2026-04-23",
+          "candidate_value": null,
+          "normalized_value": "2026-04-23",
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.0.test_name",
+          "raw_value": "Glucose",
+          "value": "Glucose",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Glucose",
+          "candidate_value": null,
+          "normalized_value": "Glucose",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.0.result",
+          "raw_value": "110",
+          "value": "110",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "110",
+          "candidate_value": null,
+          "normalized_value": "110",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-4.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.0.unit",
+          "raw_value": "mg/dL",
+          "value": "mg/dL",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "mg/dL",
+          "candidate_value": null,
+          "normalized_value": "mg/dL",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-5.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.0.reference_range",
+          "raw_value": "70-100",
+          "value": "70-100",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "70-100",
+          "candidate_value": null,
+          "normalized_value": "70-100",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-6.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.0.flag",
+          "raw_value": "HH",
+          "value": "HH",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.49,
+          "final_confidence": 0.49,
+          "final_value": null,
+          "candidate_value": "HH",
+          "normalized_value": null,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [
+            "FLAG_OUTSIDE_ENUM"
+          ],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.1.test_name",
+          "raw_value": "Sodium",
+          "value": "Sodium",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Sodium",
+          "candidate_value": null,
+          "normalized_value": "Sodium",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-8.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.1.result",
+          "raw_value": "140",
+          "value": "140",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "140",
+          "candidate_value": null,
+          "normalized_value": "140",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-9.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.1.unit",
+          "raw_value": "mmol/L",
+          "value": "mmol/L",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "mmol/L",
+          "candidate_value": null,
+          "normalized_value": "mmol/L",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-10.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.1.reference_range",
+          "raw_value": "135-145",
+          "value": "135-145",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "135-145",
+          "candidate_value": null,
+          "normalized_value": "135-145",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-11.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "tests.1.flag",
+          "raw_value": null,
+          "value": null,
+          "confidence": 0,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0,
+          "final_confidence": 0,
+          "final_value": null,
+          "candidate_value": null,
+          "normalized_value": null,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [
+            "MISSING_FIELD"
+          ],
+          "missing": true
+        }
+      ],
+      "fields_by_path": {
+        "lab_name": {
+          "value": "Lotus Laboratory",
+          "confidence": 0.9,
+          "raw_value": "Lotus Laboratory",
+          "candidate_value": null,
+          "final_value": "Lotus Laboratory",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "patient_name": {
+          "value": "Synthetic Patient L2",
+          "confidence": 0.9,
+          "raw_value": "Synthetic Patient L2",
+          "candidate_value": null,
+          "final_value": "Synthetic Patient L2",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "date": {
+          "value": "2026-04-23",
+          "confidence": 0.9,
+          "raw_value": "23/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-23",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.0.test_name": {
+          "value": "Glucose",
+          "confidence": 0.9,
+          "raw_value": "Glucose",
+          "candidate_value": null,
+          "final_value": "Glucose",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.0.result": {
+          "value": "110",
+          "confidence": 0.9,
+          "raw_value": "110",
+          "candidate_value": null,
+          "final_value": "110",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-4.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.0.unit": {
+          "value": "mg/dL",
+          "confidence": 0.9,
+          "raw_value": "mg/dL",
+          "candidate_value": null,
+          "final_value": "mg/dL",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-5.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.0.reference_range": {
+          "value": "70-100",
+          "confidence": 0.9,
+          "raw_value": "70-100",
+          "candidate_value": null,
+          "final_value": "70-100",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-6.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.0.flag": {
+          "value": null,
+          "confidence": 0.49,
+          "raw_value": "HH",
+          "candidate_value": "HH",
+          "final_value": null,
+          "final_confidence": 0.49,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [
+            "FLAG_OUTSIDE_ENUM"
+          ],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.1.test_name": {
+          "value": "Sodium",
+          "confidence": 0.9,
+          "raw_value": "Sodium",
+          "candidate_value": null,
+          "final_value": "Sodium",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-8.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.1.result": {
+          "value": "140",
+          "confidence": 0.9,
+          "raw_value": "140",
+          "candidate_value": null,
+          "final_value": "140",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-9.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.1.unit": {
+          "value": "mmol/L",
+          "confidence": 0.9,
+          "raw_value": "mmol/L",
+          "candidate_value": null,
+          "final_value": "mmol/L",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-10.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.1.reference_range": {
+          "value": "135-145",
+          "confidence": 0.9,
+          "raw_value": "135-145",
+          "candidate_value": null,
+          "final_value": "135-145",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/5cc43bc2-0d3e-4d60-bcc4-cd745e979a59-11.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "tests.1.flag": {
+          "value": null,
+          "confidence": 0,
+          "raw_value": null,
+          "candidate_value": null,
+          "final_value": null,
+          "final_confidence": 0,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [
+            "MISSING_FIELD"
+          ]
+        }
+      }
+    }
+  ],
+  "report": {
+    "url": "/reports/10c571a9-7523-4f47-9600-497f3b797cec/index.html",
+    "expires_at": "2026-11-18T07:15:36.056Z",
+    "revision": 1
+  }
+}

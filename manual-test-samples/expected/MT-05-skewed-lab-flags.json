@@ -1,0 +1,30 @@
+{
+  "id": "MT-05-skewed-lab-flags",
+  "title": "Xét nghiệm lệch góc, cờ HH và L",
+  "file": "MT-05-skewed-lab-flags.pdf",
+  "page_count": 1,
+  "document_types": [
+    "lab_report"
+  ],
+  "risks": [
+    "rotation",
+    "noncanonical flags"
+  ],
+  "expected": {
+    "flags": [
+      "HH",
+      "normal",
+      "L"
+    ],
+    "noncanonical_flags": {
+      "canonical": null,
+      "retain_raw": true,
+      "confidence_below": 0.5,
+      "source_image": true,
+      "review": true
+    },
+    "never_infer_from_reference_range": true
+  },
+  "synthetic": true,
+  "image_only": true
+}

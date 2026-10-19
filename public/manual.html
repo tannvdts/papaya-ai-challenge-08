@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Medical Document Extractor</title>
+    <link rel="stylesheet" href="/manual-test.css" />
+    <script src="/manual-test.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <div class="brand">
+          <span class="mark">M</span>
+          <div>
+            <h1>Medical Document Extractor</h1>
+            <p class="muted">Upload → đối chiếu nguồn → xác nhận kết quả</p>
+          </div>
+        </div>
+        <a href="/health">Healthcheck</a>
+      </div>
+    </header>
+    <main>
+      <p id="session" class="muted"></p>
+      <p id="notice" role="alert" hidden></p>
+      <section class="card upload">
+        <h2>1. Upload tài liệu</h2>
+        <form id="upload">
+          <label for="document">Chọn PDF hoặc ảnh</label
+          ><input
+            id="document"
+            name="document"
+            type="file"
+            accept=".pdf,.png,.jpg,.jpeg"
+            required
+          /><button class="btn primary" type="submit">Đọc tài liệu</button>
+        </form>
+        <p id="sample-guide" class="muted">Đang tải hướng dẫn bộ mẫu…</p>
+      </section>
+      <details class="card recent">
+        <summary>Các task gần đây</summary>
+        <div id="task-list"></div>
+      </details>
+      <section id="summary" aria-live="polite">
+        <h2>2. Kết quả</h2>
+        <p class="muted">Upload tài liệu hoặc chọn một task để bắt đầu.</p>
+      </section>
+      <div id="review-area" hidden>
+        <nav id="filters" aria-label="Lọc trường">
+          <button type="button" class="filter active" data-filter="all" aria-pressed="true">
+            Tất cả</button
+          ><button type="button" class="filter" data-filter="pending" aria-pressed="false">
+            Cần xử lý</button
+          ><button type="button" class="filter" data-filter="done" aria-pressed="false">
+            Đã kiểm tra
+          </button>
+        </nav>
+        <div class="layout">
+          <div id="results"></div>
+          <aside id="source-panel" class="card" aria-label="Đối chiếu nguồn và sửa trường"></aside>
+        </div>
+      </div>
+      <section id="json-result" class="card" hidden>
+        <details open>
+          <summary>JSON kết quả · cập nhật theo task đang xem</summary>
+          <pre id="result-json" aria-label="JSON kết quả" tabindex="0"></pre>
+        </details>
+      </section>
+      <section class="card">
+        <details>
+          <summary>Lịch sử kiểm tra</summary>
+          <pre id="audit"></pre>
+        </details>
+      </section>
+      <p class="footnote">
+        Điểm AI không phải xác suất đã hiệu chuẩn. Điểm sau kiểm tra 1.000 nghĩa là người kiểm tra
+        đã xác nhận. “—” nghĩa là chưa có xác nhận của người.
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "id": "MT-10-handwritten-prescription",
+  "title": "Đơn thuốc có chữ viết tay và dòng bị gạch đè",
+  "file": "MT-10-handwritten-prescription.pdf",
+  "page_count": 1,
+  "document_types": [
+    "prescription"
+  ],
+  "risks": [
+    "handwriting",
+    "crossed-out unreadable line",
+    "ambiguous date"
+  ],
+  "expected": {
+    "ground_truth_status": "Generated image must be reviewed against visible pixels; prompt text is not verified ground truth.",
+    "date": {
+      "raw_intended": "03/04/2026",
+      "confidence_below": 0.5,
+      "review": true
+    },
+    "illegible_handwriting": {
+      "value": "candidate or null",
+      "review": true,
+      "source_image": true
+    },
+    "never_invent_crossed_out_drug": true
+  },
+  "synthetic": true,
+  "image_only": true
+}

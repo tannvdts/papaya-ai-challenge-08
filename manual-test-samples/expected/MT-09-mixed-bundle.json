@@ -1,0 +1,27 @@
+{
+  "id": "MT-09-mixed-bundle",
+  "title": "Một file: hóa đơn + xét nghiệm + đơn thuốc, khác bệnh nhân",
+  "file": "MT-09-mixed-bundle.pdf",
+  "page_count": 3,
+  "document_types": [
+    "receipt",
+    "lab_report",
+    "prescription"
+  ],
+  "risks": [
+    "multiple document types",
+    "multiple patients"
+  ],
+  "expected": {
+    "document_count": 3,
+    "one_scan_task": true,
+    "patients": [
+      "Demo Patient A01",
+      "Demo Patient B02",
+      "Demo Patient P01"
+    ],
+    "never_merge_patients": true
+  },
+  "synthetic": true,
+  "image_only": true
+}

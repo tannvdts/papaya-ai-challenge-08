@@ -1,0 +1,617 @@
+{
+  "mode": "mock; NOT OpenAI benchmark",
+  "_id": "6ad5c3936180acd287548076",
+  "task_id": "f3ea08a1-ef64-4a8d-9f8e-dc03b2ddc1a5",
+  "revision": 1,
+  "status": "awaiting_review",
+  "created_at": "2026-10-19T07:15:31.306Z",
+  "filename": "DOC-DIS-01.pdf",
+  "source_hash": "7060023ee1b33fcf30acf08bb66ba55e5caabbdee511f4854744e35ef54fe9c3",
+  "coverage": true,
+  "confidence": 0.9,
+  "final_confidence": 0.9,
+  "lease_until": "2026-10-19T07:17:01.896Z",
+  "checkpoint": "extracted",
+  "pages": [
+    {
+      "number": 1,
+      "image": "page-1.png",
+      "width": 1012,
+      "height": 1432,
+      "text": "DISCHARGE SUMMARY \nSYNTHETIC TRAINING FIXTURE — NOT A REAL PATIENT / NOT MEDICAL ADVICE \ndocument_type: discharge_summary\nDocument reference DOC-DIS-01\nhospital_name: Lotus Hospital\npatient_name: Synthetic Patient D1\nadmission_date: 23/04/2026\ndischarge_date: 25/04/2026\ndiagnosis.primary: Pharyngitis\ndiagnosis.secondary: None documented\nprocedures_performed.0: Examination\nattending_physician: Dr Demo\ndischarge_instructions: Follow the printed care instructions. "
+    }
+  ],
+  "unsupported_pages": [],
+  "report_created_at": "2026-10-19T07:15:32.097Z",
+  "report_error": null,
+  "report_expires_at": "2026-11-18T07:15:32.084Z",
+  "report_revision": 1,
+  "scan_task_id": "f3ea08a1-ef64-4a8d-9f8e-dc03b2ddc1a5",
+  "documents": [
+    {
+      "document_type": "discharge_summary",
+      "classification_confidence": 0.95,
+      "segmentation_confidence": 0.9,
+      "pages": [
+        1
+      ],
+      "fields": {
+        "hospital_name": {
+          "value": "Lotus Hospital",
+          "confidence": 0.9,
+          "raw_value": "Lotus Hospital",
+          "candidate_value": null,
+          "final_value": "Lotus Hospital",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "patient_name": {
+          "value": "Synthetic Patient D1",
+          "confidence": 0.9,
+          "raw_value": "Synthetic Patient D1",
+          "candidate_value": null,
+          "final_value": "Synthetic Patient D1",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "admission_date": {
+          "value": "2026-04-23",
+          "confidence": 0.9,
+          "raw_value": "23/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-23",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "discharge_date": {
+          "value": "2026-04-25",
+          "confidence": 0.9,
+          "raw_value": "25/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-25",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "diagnosis": {
+          "value": {
+            "primary": {
+              "value": "Pharyngitis",
+              "confidence": 0.9,
+              "raw_value": "Pharyngitis",
+              "candidate_value": null,
+              "final_value": "Pharyngitis",
+              "final_confidence": 0.9,
+              "review_status": "pending",
+              "requires_review": false,
+              "warnings": [],
+              "evidence": {
+                "page": 1,
+                "bbox": null,
+                "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-4.png",
+                "source_image": "pages/page-1.png",
+                "fallback": true
+              }
+            },
+            "secondary": {
+              "value": "None documented",
+              "confidence": 0.9,
+              "raw_value": "None documented",
+              "candidate_value": null,
+              "final_value": "None documented",
+              "final_confidence": 0.9,
+              "review_status": "pending",
+              "requires_review": false,
+              "warnings": [],
+              "evidence": {
+                "page": 1,
+                "bbox": null,
+                "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-5.png",
+                "source_image": "pages/page-1.png",
+                "fallback": true
+              }
+            }
+          },
+          "confidence": 0.9,
+          "final_confidence": 0.9
+        },
+        "procedures_performed": {
+          "value": [
+            {
+              "value": "Examination",
+              "confidence": 0.9,
+              "raw_value": "Examination",
+              "candidate_value": null,
+              "final_value": "Examination",
+              "final_confidence": 0.9,
+              "review_status": "pending",
+              "requires_review": false,
+              "warnings": [],
+              "evidence": {
+                "page": 1,
+                "bbox": null,
+                "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-6.png",
+                "source_image": "pages/page-1.png",
+                "fallback": true
+              }
+            }
+          ],
+          "confidence": 0.9,
+          "final_confidence": 0.9
+        },
+        "attending_physician": {
+          "value": "Dr Demo",
+          "confidence": 0.9,
+          "raw_value": "Dr Demo",
+          "candidate_value": null,
+          "final_value": "Dr Demo",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "discharge_instructions": {
+          "value": "Follow the printed care instructions.",
+          "confidence": 0.9,
+          "raw_value": "Follow the printed care instructions.",
+          "candidate_value": null,
+          "final_value": "Follow the printed care instructions.",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-8.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        }
+      },
+      "document_id": "24a0a5e6-6df2-4229-9752-2c2a6b61cad7",
+      "structure_confirmed": false,
+      "confidence": 0.9,
+      "final_confidence": 0.9,
+      "validation_errors": [],
+      "field_list": [
+        {
+          "path": "hospital_name",
+          "raw_value": "Lotus Hospital",
+          "value": "Lotus Hospital",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Lotus Hospital",
+          "candidate_value": null,
+          "normalized_value": "Lotus Hospital",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "patient_name",
+          "raw_value": "Synthetic Patient D1",
+          "value": "Synthetic Patient D1",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Synthetic Patient D1",
+          "candidate_value": null,
+          "normalized_value": "Synthetic Patient D1",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "admission_date",
+          "raw_value": "23/04/2026",
+          "value": "23/04/2026",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "2026-04-23",
+          "candidate_value": null,
+          "normalized_value": "2026-04-23",
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "discharge_date",
+          "raw_value": "25/04/2026",
+          "value": "25/04/2026",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "2026-04-25",
+          "candidate_value": null,
+          "normalized_value": "2026-04-25",
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "diagnosis.primary",
+          "raw_value": "Pharyngitis",
+          "value": "Pharyngitis",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Pharyngitis",
+          "candidate_value": null,
+          "normalized_value": "Pharyngitis",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-4.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "diagnosis.secondary",
+          "raw_value": "None documented",
+          "value": "None documented",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "None documented",
+          "candidate_value": null,
+          "normalized_value": "None documented",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-5.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "procedures_performed.0",
+          "raw_value": "Examination",
+          "value": "Examination",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Examination",
+          "candidate_value": null,
+          "normalized_value": "Examination",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-6.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "attending_physician",
+          "raw_value": "Dr Demo",
+          "value": "Dr Demo",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Dr Demo",
+          "candidate_value": null,
+          "normalized_value": "Dr Demo",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "discharge_instructions",
+          "raw_value": "Follow the printed care instructions.",
+          "value": "Follow the printed care instructions.",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Follow the printed care instructions.",
+          "candidate_value": null,
+          "normalized_value": "Follow the printed care instructions.",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-8.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        }
+      ],
+      "fields_by_path": {
+        "hospital_name": {
+          "value": "Lotus Hospital",
+          "confidence": 0.9,
+          "raw_value": "Lotus Hospital",
+          "candidate_value": null,
+          "final_value": "Lotus Hospital",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "patient_name": {
+          "value": "Synthetic Patient D1",
+          "confidence": 0.9,
+          "raw_value": "Synthetic Patient D1",
+          "candidate_value": null,
+          "final_value": "Synthetic Patient D1",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "admission_date": {
+          "value": "2026-04-23",
+          "confidence": 0.9,
+          "raw_value": "23/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-23",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "discharge_date": {
+          "value": "2026-04-25",
+          "confidence": 0.9,
+          "raw_value": "25/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-25",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "diagnosis.primary": {
+          "value": "Pharyngitis",
+          "confidence": 0.9,
+          "raw_value": "Pharyngitis",
+          "candidate_value": null,
+          "final_value": "Pharyngitis",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-4.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "diagnosis.secondary": {
+          "value": "None documented",
+          "confidence": 0.9,
+          "raw_value": "None documented",
+          "candidate_value": null,
+          "final_value": "None documented",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-5.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "procedures_performed.0": {
+          "value": "Examination",
+          "confidence": 0.9,
+          "raw_value": "Examination",
+          "candidate_value": null,
+          "final_value": "Examination",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-6.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "attending_physician": {
+          "value": "Dr Demo",
+          "confidence": 0.9,
+          "raw_value": "Dr Demo",
+          "candidate_value": null,
+          "final_value": "Dr Demo",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "discharge_instructions": {
+          "value": "Follow the printed care instructions.",
+          "confidence": 0.9,
+          "raw_value": "Follow the printed care instructions.",
+          "candidate_value": null,
+          "final_value": "Follow the printed care instructions.",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/24a0a5e6-6df2-4229-9752-2c2a6b61cad7-8.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        }
+      }
+    }
+  ],
+  "report": {
+    "url": "/reports/f3ea08a1-ef64-4a8d-9f8e-dc03b2ddc1a5/index.html",
+    "expires_at": "2026-11-18T07:15:32.084Z",
+    "revision": 1
+  }
+}

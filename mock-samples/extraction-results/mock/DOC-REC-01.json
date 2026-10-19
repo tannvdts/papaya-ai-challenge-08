@@ -1,0 +1,674 @@
+{
+  "mode": "mock; NOT OpenAI benchmark",
+  "_id": "6ad5c3906180acd287547ff5",
+  "task_id": "c56d6f76-ff5c-4d0a-a5df-f301d650ab1a",
+  "revision": 1,
+  "status": "awaiting_review",
+  "created_at": "2026-10-19T07:15:28.468Z",
+  "filename": "DOC-REC-01.pdf",
+  "source_hash": "de05e0e2b970a4b9a2e5367a1a08740375f6e39df3e9e0f72e78dbfda5a1ec5f",
+  "coverage": true,
+  "confidence": 0.9,
+  "final_confidence": 0.9,
+  "lease_until": "2026-10-19T07:16:58.893Z",
+  "checkpoint": "extracted",
+  "pages": [
+    {
+      "number": 1,
+      "image": "page-1.png",
+      "width": 1012,
+      "height": 1432,
+      "text": "RECEIPT \nSYNTHETIC TRAINING FIXTURE — NOT A REAL PATIENT / NOT MEDICAL ADVICE \ndocument_type: receipt\nDocument reference DOC-REC-01\nhospital_name: Lotus Hospital\npatient_name: Synthetic Patient R1\ndate: 23/04/2026\nitems.0.description: Consultation\nitems.0.quantity: 1\nitems.0.unit_price: 100.00\nitems.0.total: 100.00\ngrand_total: 100.00\npayment_method: card\ncurrency: USD "
+    }
+  ],
+  "unsupported_pages": [],
+  "report_created_at": "2026-10-19T07:15:29.347Z",
+  "report_error": null,
+  "report_expires_at": "2026-11-18T07:15:29.329Z",
+  "report_revision": 1,
+  "scan_task_id": "c56d6f76-ff5c-4d0a-a5df-f301d650ab1a",
+  "documents": [
+    {
+      "document_type": "receipt",
+      "classification_confidence": 0.95,
+      "segmentation_confidence": 0.9,
+      "pages": [
+        1
+      ],
+      "fields": {
+        "hospital_name": {
+          "value": "Lotus Hospital",
+          "confidence": 0.9,
+          "raw_value": "Lotus Hospital",
+          "candidate_value": null,
+          "final_value": "Lotus Hospital",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "patient_name": {
+          "value": "Synthetic Patient R1",
+          "confidence": 0.9,
+          "raw_value": "Synthetic Patient R1",
+          "candidate_value": null,
+          "final_value": "Synthetic Patient R1",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "date": {
+          "value": "2026-04-23",
+          "confidence": 0.9,
+          "raw_value": "23/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-23",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "items": {
+          "value": [
+            {
+              "description": {
+                "value": "Consultation",
+                "confidence": 0.9,
+                "raw_value": "Consultation",
+                "candidate_value": null,
+                "final_value": "Consultation",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-3.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "quantity": {
+                "value": "1",
+                "confidence": 0.9,
+                "raw_value": "1",
+                "candidate_value": null,
+                "final_value": "1",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-4.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "unit_price": {
+                "value": "100",
+                "confidence": 0.9,
+                "raw_value": "100.00",
+                "candidate_value": null,
+                "final_value": "100",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-5.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "total": {
+                "value": "100",
+                "confidence": 0.9,
+                "raw_value": "100.00",
+                "candidate_value": null,
+                "final_value": "100",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-6.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              }
+            }
+          ],
+          "confidence": 0.9,
+          "final_confidence": 0.9
+        },
+        "grand_total": {
+          "value": "100",
+          "confidence": 0.9,
+          "raw_value": "100.00",
+          "candidate_value": null,
+          "final_value": "100",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "payment_method": {
+          "value": "card",
+          "confidence": 0.9,
+          "raw_value": "card",
+          "candidate_value": null,
+          "final_value": "card",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-8.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 0.9,
+          "raw_value": "USD",
+          "candidate_value": null,
+          "final_value": "USD",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-9.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        }
+      },
+      "document_id": "e22c4fde-1971-4ac2-9765-6267d101bada",
+      "structure_confirmed": false,
+      "confidence": 0.9,
+      "final_confidence": 0.9,
+      "validation_errors": [],
+      "field_list": [
+        {
+          "path": "hospital_name",
+          "raw_value": "Lotus Hospital",
+          "value": "Lotus Hospital",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Lotus Hospital",
+          "candidate_value": null,
+          "normalized_value": "Lotus Hospital",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "patient_name",
+          "raw_value": "Synthetic Patient R1",
+          "value": "Synthetic Patient R1",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Synthetic Patient R1",
+          "candidate_value": null,
+          "normalized_value": "Synthetic Patient R1",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "date",
+          "raw_value": "23/04/2026",
+          "value": "23/04/2026",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "2026-04-23",
+          "candidate_value": null,
+          "normalized_value": "2026-04-23",
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "items.0.description",
+          "raw_value": "Consultation",
+          "value": "Consultation",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Consultation",
+          "candidate_value": null,
+          "normalized_value": "Consultation",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "items.0.quantity",
+          "raw_value": "1",
+          "value": "1",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "1",
+          "candidate_value": null,
+          "normalized_value": "1",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-4.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "items.0.unit_price",
+          "raw_value": "100.00",
+          "value": "100.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "100",
+          "candidate_value": null,
+          "normalized_value": "100",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-5.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "items.0.total",
+          "raw_value": "100.00",
+          "value": "100.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "100",
+          "candidate_value": null,
+          "normalized_value": "100",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-6.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "grand_total",
+          "raw_value": "100.00",
+          "value": "100.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "100",
+          "candidate_value": null,
+          "normalized_value": "100",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "payment_method",
+          "raw_value": "card",
+          "value": "card",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "card",
+          "candidate_value": null,
+          "normalized_value": "card",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-8.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "currency",
+          "raw_value": "USD",
+          "value": "USD",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "USD",
+          "candidate_value": null,
+          "normalized_value": "USD",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-9.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        }
+      ],
+      "fields_by_path": {
+        "hospital_name": {
+          "value": "Lotus Hospital",
+          "confidence": 0.9,
+          "raw_value": "Lotus Hospital",
+          "candidate_value": null,
+          "final_value": "Lotus Hospital",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "patient_name": {
+          "value": "Synthetic Patient R1",
+          "confidence": 0.9,
+          "raw_value": "Synthetic Patient R1",
+          "candidate_value": null,
+          "final_value": "Synthetic Patient R1",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "date": {
+          "value": "2026-04-23",
+          "confidence": 0.9,
+          "raw_value": "23/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-23",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "items.0.description": {
+          "value": "Consultation",
+          "confidence": 0.9,
+          "raw_value": "Consultation",
+          "candidate_value": null,
+          "final_value": "Consultation",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "items.0.quantity": {
+          "value": "1",
+          "confidence": 0.9,
+          "raw_value": "1",
+          "candidate_value": null,
+          "final_value": "1",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-4.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "items.0.unit_price": {
+          "value": "100",
+          "confidence": 0.9,
+          "raw_value": "100.00",
+          "candidate_value": null,
+          "final_value": "100",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-5.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "items.0.total": {
+          "value": "100",
+          "confidence": 0.9,
+          "raw_value": "100.00",
+          "candidate_value": null,
+          "final_value": "100",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-6.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "grand_total": {
+          "value": "100",
+          "confidence": 0.9,
+          "raw_value": "100.00",
+          "candidate_value": null,
+          "final_value": "100",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "payment_method": {
+          "value": "card",
+          "confidence": 0.9,
+          "raw_value": "card",
+          "candidate_value": null,
+          "final_value": "card",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-8.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 0.9,
+          "raw_value": "USD",
+          "candidate_value": null,
+          "final_value": "USD",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e22c4fde-1971-4ac2-9765-6267d101bada-9.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        }
+      }
+    }
+  ],
+  "report": {
+    "url": "/reports/c56d6f76-ff5c-4d0a-a5df-f301d650ab1a/index.html",
+    "expires_at": "2026-11-18T07:15:29.329Z",
+    "revision": 1
+  }
+}

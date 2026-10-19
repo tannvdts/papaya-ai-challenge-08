@@ -1,0 +1,22 @@
+{
+  "id": "MT-12-missing-date-and-total",
+  "title": "Ngày và tổng tiền bị mất khỏi bản scan",
+  "file": "MT-12-missing-date-and-total.pdf",
+  "page_count": 1,
+  "document_types": [
+    "receipt"
+  ],
+  "risks": [
+    "missing required fields",
+    "no arithmetic substitution"
+  ],
+  "expected": {
+    "date": null,
+    "grand_total": null,
+    "confidence_below": 0.5,
+    "missing_warning": true,
+    "decision": "Do not reconstruct erased required values from arithmetic or original fixture. Retain page evidence when no field box exists."
+  },
+  "synthetic": true,
+  "image_only": true
+}

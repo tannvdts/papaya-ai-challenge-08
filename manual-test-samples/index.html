@@ -1,0 +1,118 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>Manual test samples</title><style>body{font:16px system-ui;max-width:1200px;margin:40px auto;padding:0 24px;color:#213047;background:#f5f6f8}h1{font-size:32px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}article{background:white;padding:20px;border:1px solid #d4dce5;border-radius:10px}img{width:155px;float:left;margin:0 18px 12px 0}p{line-height:1.6}pre{white-space:pre-wrap;font-size:12px;clear:both}a{color:#1764ad}.notice{padding:18px;background:#fff0c7}</style><h1>Bộ mẫu manual test</h1><p class="notice">14 PDF chỉ chứa ảnh scan, không có lớp text. Dữ liệu giả hoàn toàn. Các lỗi mờ, mất chữ, chữ viết tay là chủ đích. Không dùng cho y tế. Đây là tình huống kiểm tra, chưa phải kết quả test OpenAI.</p><p>Chọn PDF, upload tại <a href="http://127.0.0.1:4000/manual-test">Manual test</a>, đối chiếu kết quả, ảnh nguồn và luồng approve/update. Mỗi lần upload tạo một scan_task. Mọi ngày cần xác nhận; confidence &lt; 0.5 ở bất kỳ thành phần nào phải chặn kết quả dùng tiếp.</p><p>Mẫu MT-10 được tạo bằng AI: kiểm tra giá trị thật trên ảnh trước khi xem là đáp án. Mẫu MT-08/11 có thể không xác định được đủ tài liệu; hệ thống phải thể hiện bất định.</p><div class="grid"><article><img src="previews/MT-01-clean-receipt.png" alt="Preview MT-01-clean-receipt"><h2>MT-01-clean-receipt</h2><p>Baseline: hóa đơn rõ, thuế/giảm giá/hoàn tiền/dòng 0</p><p>1 trang · date review, tax/discount/refund/zero</p><p><a href="MT-01-clean-receipt.pdf">Mở PDF</a> · <a href="expected/MT-01-clean-receipt.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;document_count&quot;: 1,
+  &quot;patient&quot;: &quot;Demo Patient A01&quot;,
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;grand_total&quot;: &quot;150.00&quot;,
+  &quot;tax&quot;: &quot;15.00&quot;,
+  &quot;discount&quot;: &quot;10.00&quot;,
+  &quot;refund&quot;: &quot;5.00&quot;,
+  &quot;zero_line&quot;: true,
+  &quot;arithmetic&quot;: &quot;100+50+0+15-10-5=150&quot;
+}</pre></details></article><article><img src="previews/MT-02-faded-vietnamese.png" alt="Preview MT-02-faded-vietnamese"><h2>MT-02-faded-vietnamese</h2><p>Scan nhạt, tiếng Việt, ngày mơ hồ</p><p>1 trang · Vietnamese, low contrast, ambiguous date</p><p><a href="MT-02-faded-vietnamese.pdf">Mở PDF</a> · <a href="expected/MT-02-faded-vietnamese.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;date&quot;: {
+    &quot;raw&quot;: &quot;03/04/2026&quot;,
+    &quot;normalized&quot;: null,
+    &quot;confidence_below&quot;: 0.5,
+    &quot;review&quot;: true,
+    &quot;source_image&quot;: true
+  },
+  &quot;patient&quot;: &quot;Nguyễn An Demo&quot;
+}</pre></details></article><article><img src="previews/MT-03-european-money.png" alt="Preview MT-03-european-money"><h2>MT-03-european-money</h2><p>Tiếng Pháp, định dạng tiền khác chuẩn</p><p>1 trang · French, shadow, European separators</p><p><a href="MT-03-european-money.pdf">Mở PDF</a> · <a href="expected/MT-03-european-money.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;currency&quot;: &quot;EUR&quot;,
+  &quot;grand_total_raw&quot;: &quot;1.234,56&quot;,
+  &quot;review&quot;: true,
+  &quot;no_silent_conversion&quot;: true,
+  &quot;decision&quot;: &quot;Preserve raw and source crop. Current parser may leave normalized value null; reviewer confirms decimal interpretation.&quot;
+}</pre></details></article><article><img src="previews/MT-04-unknown-currency.png" alt="Preview MT-04-unknown-currency"><h2>MT-04-unknown-currency</h2><p>Ký hiệu $ không xác định đơn vị tiền</p><p>1 trang · unknown currency</p><p><a href="MT-04-unknown-currency.pdf">Mở PDF</a> · <a href="expected/MT-04-unknown-currency.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;currency&quot;: {
+    &quot;raw&quot;: &quot;$&quot;,
+    &quot;confidence_below&quot;: 0.5,
+    &quot;review&quot;: true,
+    &quot;source_image&quot;: true
+  },
+  &quot;no_currency_guess&quot;: true
+}</pre></details></article><article><img src="previews/MT-05-skewed-lab-flags.png" alt="Preview MT-05-skewed-lab-flags"><h2>MT-05-skewed-lab-flags</h2><p>Xét nghiệm lệch góc, cờ HH và L</p><p>1 trang · rotation, noncanonical flags</p><p><a href="MT-05-skewed-lab-flags.pdf">Mở PDF</a> · <a href="expected/MT-05-skewed-lab-flags.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;flags&quot;: [
+    &quot;HH&quot;,
+    &quot;normal&quot;,
+    &quot;L&quot;
+  ],
+  &quot;noncanonical_flags&quot;: {
+    &quot;canonical&quot;: null,
+    &quot;retain_raw&quot;: true,
+    &quot;confidence_below&quot;: 0.5,
+    &quot;source_image&quot;: true,
+    &quot;review&quot;: true
+  },
+  &quot;never_infer_from_reference_range&quot;: true
+}</pre></details></article><article><img src="previews/MT-06-fax-missing-flag.png" alt="Preview MT-06-fax-missing-flag"><h2>MT-06-fax-missing-flag</h2><p>Bản fax, thiếu cờ sodium</p><p>1 trang · fax, missing field</p><p><a href="MT-06-fax-missing-flag.pdf">Mở PDF</a> · <a href="expected/MT-06-fax-missing-flag.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;sodium_flag&quot;: null,
+  &quot;missing_flag_confidence_below&quot;: 0.5,
+  &quot;never_infer_normal&quot;: true,
+  &quot;review&quot;: true
+}</pre></details></article><article><img src="previews/MT-07-discharge-two-pages.png" alt="Preview MT-07-discharge-two-pages"><h2>MT-07-discharge-two-pages</h2><p>Giấy ra viện hai trang, Việt/Anh</p><p>2 trang · page continuity, Vietnamese/English</p><p><a href="MT-07-discharge-two-pages.pdf">Mở PDF</a> · <a href="expected/MT-07-discharge-two-pages.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;document_count&quot;: 1,
+  &quot;pages&quot;: [
+    1,
+    2
+  ],
+  &quot;patient&quot;: &quot;Demo Patient D01&quot;,
+  &quot;admission_date&quot;: &quot;23/04/2026&quot;,
+  &quot;discharge_date&quot;: &quot;25/04/2026&quot;,
+  &quot;primary_diagnosis&quot;: &quot;Viêm họng / Pharyngitis&quot;,
+  &quot;preserve_language&quot;: true
+}</pre></details></article><article><img src="previews/MT-08-uncertain-boundary-patients.png" alt="Preview MT-08-uncertain-boundary-patients"><h2>MT-08-uncertain-boundary-patients</h2><p>Hai tài liệu trên một trang, che một phần danh tính</p><p>1 trang · same-page segmentation, uncertain patient boundary</p><p><a href="MT-08-uncertain-boundary-patients.pdf">Mở PDF</a> · <a href="expected/MT-08-uncertain-boundary-patients.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;intended_document_count&quot;: 2,
+  &quot;intended_patients&quot;: [
+    &quot;Demo Patient A01&quot;,
+    &quot;Demo Patient B02&quot;
+  ],
+  &quot;decision&quot;: &quot;If boundaries or patient identity cannot be established from visible pixels, lower segmentation confidence below 0.5, retain source and require structural review. Never assert the occluded identity from this sidecar.&quot;,
+  &quot;exact_count_not_acceptance_requirement_when_ambiguous&quot;: true
+}</pre></details></article><article><img src="previews/MT-09-mixed-bundle.png" alt="Preview MT-09-mixed-bundle"><h2>MT-09-mixed-bundle</h2><p>Một file: hóa đơn + xét nghiệm + đơn thuốc, khác bệnh nhân</p><p>3 trang · multiple document types, multiple patients</p><p><a href="MT-09-mixed-bundle.pdf">Mở PDF</a> · <a href="expected/MT-09-mixed-bundle.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;document_count&quot;: 3,
+  &quot;one_scan_task&quot;: true,
+  &quot;patients&quot;: [
+    &quot;Demo Patient A01&quot;,
+    &quot;Demo Patient B02&quot;,
+    &quot;Demo Patient P01&quot;
+  ],
+  &quot;never_merge_patients&quot;: true
+}</pre></details></article><article><img src="previews/MT-10-handwritten-prescription.png" alt="Preview MT-10-handwritten-prescription"><h2>MT-10-handwritten-prescription</h2><p>Đơn thuốc có chữ viết tay và dòng bị gạch đè</p><p>1 trang · handwriting, crossed-out unreadable line, ambiguous date</p><p><a href="MT-10-handwritten-prescription.pdf">Mở PDF</a> · <a href="expected/MT-10-handwritten-prescription.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;ground_truth_status&quot;: &quot;Generated image must be reviewed against visible pixels; prompt text is not verified ground truth.&quot;,
+  &quot;date&quot;: {
+    &quot;raw_intended&quot;: &quot;03/04/2026&quot;,
+    &quot;confidence_below&quot;: 0.5,
+    &quot;review&quot;: true
+  },
+  &quot;illegible_handwriting&quot;: {
+    &quot;value&quot;: &quot;candidate or null&quot;,
+    &quot;review&quot;: true,
+    &quot;source_image&quot;: true
+  },
+  &quot;never_invent_crossed_out_drug&quot;: true
+}</pre></details></article><article><img src="previews/MT-11-unreadable-scan.png" alt="Preview MT-11-unreadable-scan"><h2>MT-11-unreadable-scan</h2><p>Scan hỏng/mờ nghiêm trọng</p><p>1 trang · unreadable document</p><p><a href="MT-11-unreadable-scan.pdf">Mở PDF</a> · <a href="expected/MT-11-unreadable-scan.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;unreadable_fields&quot;: null,
+  &quot;confidence_below&quot;: 0.5,
+  &quot;source_image&quot;: true,
+  &quot;review&quot;: true,
+  &quot;decision&quot;: &quot;Allow an unsupported/uncertain classification outcome; do not require a document type the pixels cannot justify. No hallucinated values.&quot;
+}</pre></details></article><article><img src="previews/MT-12-missing-date-and-total.png" alt="Preview MT-12-missing-date-and-total"><h2>MT-12-missing-date-and-total</h2><p>Ngày và tổng tiền bị mất khỏi bản scan</p><p>1 trang · missing required fields, no arithmetic substitution</p><p><a href="MT-12-missing-date-and-total.pdf">Mở PDF</a> · <a href="expected/MT-12-missing-date-and-total.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;date&quot;: null,
+  &quot;grand_total&quot;: null,
+  &quot;confidence_below&quot;: 0.5,
+  &quot;missing_warning&quot;: true,
+  &quot;decision&quot;: &quot;Do not reconstruct erased required values from arithmetic or original fixture. Retain page evidence when no field box exists.&quot;
+}</pre></details></article><article><img src="previews/MT-13-total-mismatch.png" alt="Preview MT-13-total-mismatch"><h2>MT-13-total-mismatch</h2><p>Tổng tiền không khớp chi tiết trên 5%</p><p>1 trang · arithmetic mismatch</p><p><a href="MT-13-total-mismatch.pdf">Mở PDF</a> · <a href="expected/MT-13-total-mismatch.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;printed_grand_total&quot;: &quot;200.00&quot;,
+  &quot;computed_total&quot;: &quot;150.00&quot;,
+  &quot;mismatch_over_5_percent&quot;: true,
+  &quot;review&quot;: true,
+  &quot;do_not_rewrite_printed_total&quot;: true
+}</pre></details></article><article><img src="previews/MT-14-french-prescription-photo.png" alt="Preview MT-14-french-prescription-photo"><h2>MT-14-french-prescription-photo</h2><p>Đơn thuốc tiếng Pháp, bóng đổ và nhiễu</p><p>1 trang · French, photo shadow, noise</p><p><a href="MT-14-french-prescription-photo.pdf">Mở PDF</a> · <a href="expected/MT-14-french-prescription-photo.json">Kỳ vọng</a></p><details><summary>Chi tiết kiểm tra</summary><pre>{
+  &quot;document_count&quot;: 1,
+  &quot;patient&quot;: &quot;Demo Patient P01&quot;,
+  &quot;medicine&quot;: &quot;Demo medicine A (fictional)&quot;,
+  &quot;preserve_original_frequency&quot;: &quot;une fois par jour&quot;,
+  &quot;preserve_original_duration&quot;: &quot;3 jours&quot;
+}</pre></details></article></div></html>

@@ -1,0 +1,21 @@
+{
+  "id": "MT-13-total-mismatch",
+  "title": "Tổng tiền không khớp chi tiết trên 5%",
+  "file": "MT-13-total-mismatch.pdf",
+  "page_count": 1,
+  "document_types": [
+    "receipt"
+  ],
+  "risks": [
+    "arithmetic mismatch"
+  ],
+  "expected": {
+    "printed_grand_total": "200.00",
+    "computed_total": "150.00",
+    "mismatch_over_5_percent": true,
+    "review": true,
+    "do_not_rewrite_printed_total": true
+  },
+  "synthetic": true,
+  "image_only": true
+}

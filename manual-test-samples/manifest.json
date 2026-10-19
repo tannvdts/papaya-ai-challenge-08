@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "common_rules": {
+    "dates": "All extracted dates require explicit human confirmation.",
+    "gate": "Any field/classification/segmentation confidence <0.5 must keep aggregate <0.5 and block downstream use until review.",
+    "evidence": "Evidence must point to the uploaded scan, grouped by document."
+  },
+  "samples": [
+    {
+      "id": "MT-01-clean-receipt",
+      "title": "Baseline: hóa đơn rõ, thuế/giảm giá/hoàn tiền/dòng 0",
+      "file": "MT-01-clean-receipt.pdf",
+      "page_count": 1,
+      "document_types": [
+        "receipt"
+      ],
+      "risks": [
+        "date review",
+        "tax/discount/refund/zero"
+      ],
+      "expected": {
+        "document_count": 1,
+        "patient": "Demo Patient A01",
+        "currency": "USD",
+        "grand_total": "150.00",
+        "tax": "15.00",
+        "discount": "10.00",
+        "refund": "5.00",
+        "zero_line": true,
+        "arithmetic": "100+50+0+15-10-5=150"
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-02-faded-vietnamese",
+      "title": "Scan nhạt, tiếng Việt, ngày mơ hồ",
+      "file": "MT-02-faded-vietnamese.pdf",
+      "page_count": 1,
+      "document_types": [
+        "receipt"
+      ],
+      "risks": [
+        "Vietnamese",
+        "low contrast",
+        "ambiguous date"
+      ],
+      "expected": {
+        "date": {
+          "raw": "03/04/2026",
+          "normalized": null,
+          "confidence_below": 0.5,
+          "review": true,
+          "source_image": true
+        },
+        "patient": "Nguyễn An Demo"
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-03-european-money",
+      "title": "Tiếng Pháp, định dạng tiền khác chuẩn",
+      "file": "MT-03-european-money.pdf",
+      "page_count": 1,
+      "document_types": [
+        "receipt"
+      ],
+      "risks": [
+        "French",
+        "shadow",
+        "European separators"
+      ],
+      "expected": {
+        "currency": "EUR",
+        "grand_total_raw": "1.234,56",
+        "review": true,
+        "no_silent_conversion": true,
+        "decision": "Preserve raw and source crop. Current parser may leave normalized value null; reviewer confirms decimal interpretation."
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-04-unknown-currency",
+      "title": "Ký hiệu $ không xác định đơn vị tiền",
+      "file": "MT-04-unknown-currency.pdf",
+      "page_count": 1,
+      "document_types": [
+        "receipt"
+      ],
+      "risks": [
+        "unknown currency"
+      ],
+      "expected": {
+        "currency": {
+          "raw": "$",
+          "confidence_below": 0.5,
+          "review": true,
+          "source_image": true
+        },
+        "no_currency_guess": true
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-05-skewed-lab-flags",
+      "title": "Xét nghiệm lệch góc, cờ HH và L",
+      "file": "MT-05-skewed-lab-flags.pdf",
+      "page_count": 1,
+      "document_types": [
+        "lab_report"
+      ],
+      "risks": [
+        "rotation",
+        "noncanonical flags"
+      ],
+      "expected": {
+        "flags": [
+          "HH",
+          "normal",
+          "L"
+        ],
+        "noncanonical_flags": {
+          "canonical": null,
+          "retain_raw": true,
+          "confidence_below": 0.5,
+          "source_image": true,
+          "review": true
+        },
+        "never_infer_from_reference_range": true
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-06-fax-missing-flag",
+      "title": "Bản fax, thiếu cờ sodium",
+      "file": "MT-06-fax-missing-flag.pdf",
+      "page_count": 1,
+      "document_types": [
+        "lab_report"
+      ],
+      "risks": [
+        "fax",
+        "missing field"
+      ],
+      "expected": {
+        "sodium_flag": null,
+        "missing_flag_confidence_below": 0.5,
+        "never_infer_normal": true,
+        "review": true
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-07-discharge-two-pages",
+      "title": "Giấy ra viện hai trang, Việt/Anh",
+      "file": "MT-07-discharge-two-pages.pdf",
+      "page_count": 2,
+      "document_types": [
+        "discharge_summary"
+      ],
+      "risks": [
+        "page continuity",
+        "Vietnamese/English"
+      ],
+      "expected": {
+        "document_count": 1,
+        "pages": [
+          1,
+          2
+        ],
+        "patient": "Demo Patient D01",
+        "admission_date": "23/04/2026",
+        "discharge_date": "25/04/2026",
+        "primary_diagnosis": "Viêm họng / Pharyngitis",
+        "preserve_language": true
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-08-uncertain-boundary-patients",
+      "title": "Hai tài liệu trên một trang, che một phần danh tính",
+      "file": "MT-08-uncertain-boundary-patients.pdf",
+      "page_count": 1,
+      "document_types": [
+        "receipt",
+        "lab_report"
+      ],
+      "risks": [
+        "same-page segmentation",
+        "uncertain patient boundary"
+      ],
+      "expected": {
+        "intended_document_count": 2,
+        "intended_patients": [
+          "Demo Patient A01",
+          "Demo Patient B02"
+        ],
+        "decision": "If boundaries or patient identity cannot be established from visible pixels, lower segmentation confidence below 0.5, retain source and require structural review. Never assert the occluded identity from this sidecar.",
+        "exact_count_not_acceptance_requirement_when_ambiguous": true
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-09-mixed-bundle",
+      "title": "Một file: hóa đơn + xét nghiệm + đơn thuốc, khác bệnh nhân",
+      "file": "MT-09-mixed-bundle.pdf",
+      "page_count": 3,
+      "document_types": [
+        "receipt",
+        "lab_report",
+        "prescription"
+      ],
+      "risks": [
+        "multiple document types",
+        "multiple patients"
+      ],
+      "expected": {
+        "document_count": 3,
+        "one_scan_task": true,
+        "patients": [
+          "Demo Patient A01",
+          "Demo Patient B02",
+          "Demo Patient P01"
+        ],
+        "never_merge_patients": true
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-10-handwritten-prescription",
+      "title": "Đơn thuốc có chữ viết tay và dòng bị gạch đè",
+      "file": "MT-10-handwritten-prescription.pdf",
+      "page_count": 1,
+      "document_types": [
+        "prescription"
+      ],
+      "risks": [
+        "handwriting",
+        "crossed-out unreadable line",
+        "ambiguous date"
+      ],
+      "expected": {
+        "ground_truth_status": "Generated image must be reviewed against visible pixels; prompt text is not verified ground truth.",
+        "date": {
+          "raw_intended": "03/04/2026",
+          "confidence_below": 0.5,
+          "review": true
+        },
+        "illegible_handwriting": {
+          "value": "candidate or null",
+          "review": true,
+          "source_image": true
+        },
+        "never_invent_crossed_out_drug": true
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-11-unreadable-scan",
+      "title": "Scan hỏng/mờ nghiêm trọng",
+      "file": "MT-11-unreadable-scan.pdf",
+      "page_count": 1,
+      "document_types": [],
+      "risks": [
+        "unreadable document"
+      ],
+      "expected": {
+        "unreadable_fields": null,
+        "confidence_below": 0.5,
+        "source_image": true,
+        "review": true,
+        "decision": "Allow an unsupported/uncertain classification outcome; do not require a document type the pixels cannot justify. No hallucinated values."
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-12-missing-date-and-total",
+      "title": "Ngày và tổng tiền bị mất khỏi bản scan",
+      "file": "MT-12-missing-date-and-total.pdf",
+      "page_count": 1,
+      "document_types": [
+        "receipt"
+      ],
+      "risks": [
+        "missing required fields",
+        "no arithmetic substitution"
+      ],
+      "expected": {
+        "date": null,
+        "grand_total": null,
+        "confidence_below": 0.5,
+        "missing_warning": true,
+        "decision": "Do not reconstruct erased required values from arithmetic or original fixture. Retain page evidence when no field box exists."
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-13-total-mismatch",
+      "title": "Tổng tiền không khớp chi tiết trên 5%",
+      "file": "MT-13-total-mismatch.pdf",
+      "page_count": 1,
+      "document_types": [
+        "receipt"
+      ],
+      "risks": [
+        "arithmetic mismatch"
+      ],
+      "expected": {
+        "printed_grand_total": "200.00",
+        "computed_total": "150.00",
+        "mismatch_over_5_percent": true,
+        "review": true,
+        "do_not_rewrite_printed_total": true
+      },
+      "synthetic": true,
+      "image_only": true
+    },
+    {
+      "id": "MT-14-french-prescription-photo",
+      "title": "Đơn thuốc tiếng Pháp, bóng đổ và nhiễu",
+      "file": "MT-14-french-prescription-photo.pdf",
+      "page_count": 1,
+      "document_types": [
+        "prescription"
+      ],
+      "risks": [
+        "French",
+        "photo shadow",
+        "noise"
+      ],
+      "expected": {
+        "document_count": 1,
+        "patient": "Demo Patient P01",
+        "medicine": "Demo medicine A (fictional)",
+        "preserve_original_frequency": "une fois par jour",
+        "preserve_original_duration": "3 jours"
+      },
+      "synthetic": true,
+      "image_only": true
+    }
+  ]
+}

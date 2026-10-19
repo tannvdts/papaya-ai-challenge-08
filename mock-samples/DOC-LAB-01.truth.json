@@ -1,0 +1,87 @@
+{
+  "documents": [
+    {
+      "document_type": "lab_report",
+      "classification_confidence": 0.95,
+      "segmentation_confidence": 0.9,
+      "pages": [
+        1
+      ],
+      "fields": [
+        {
+          "path": "lab_name",
+          "raw_value": "Lotus Laboratory",
+          "value": "Lotus Laboratory",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "patient_name",
+          "raw_value": "Synthetic Patient L1",
+          "value": "Synthetic Patient L1",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "date",
+          "raw_value": "23/04/2026",
+          "value": "23/04/2026",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "tests.0.test_name",
+          "raw_value": "Glucose",
+          "value": "Glucose",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "tests.0.result",
+          "raw_value": "110",
+          "value": "110",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "tests.0.unit",
+          "raw_value": "mg/dL",
+          "value": "mg/dL",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "tests.0.reference_range",
+          "raw_value": "70-100",
+          "value": "70-100",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "tests.0.flag",
+          "raw_value": "high",
+          "value": "high",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        }
+      ]
+    }
+  ],
+  "unsupported_pages": []
+}

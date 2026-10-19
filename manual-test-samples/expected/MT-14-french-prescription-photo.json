@@ -1,0 +1,23 @@
+{
+  "id": "MT-14-french-prescription-photo",
+  "title": "Đơn thuốc tiếng Pháp, bóng đổ và nhiễu",
+  "file": "MT-14-french-prescription-photo.pdf",
+  "page_count": 1,
+  "document_types": [
+    "prescription"
+  ],
+  "risks": [
+    "French",
+    "photo shadow",
+    "noise"
+  ],
+  "expected": {
+    "document_count": 1,
+    "patient": "Demo Patient P01",
+    "medicine": "Demo medicine A (fictional)",
+    "preserve_original_frequency": "une fois par jour",
+    "preserve_original_duration": "3 jours"
+  },
+  "synthetic": true,
+  "image_only": true
+}

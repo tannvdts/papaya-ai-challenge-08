@@ -1,0 +1,159 @@
+{
+  "documents": [
+    {
+      "document_type": "receipt",
+      "classification_confidence": 0.95,
+      "segmentation_confidence": 0.9,
+      "pages": [
+        1
+      ],
+      "fields": [
+        {
+          "path": "hospital_name",
+          "raw_value": "Lotus Hospital",
+          "value": "Lotus Hospital",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "patient_name",
+          "raw_value": "Synthetic Patient R3",
+          "value": "Synthetic Patient R3",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "date",
+          "raw_value": "23/04/2026",
+          "value": "23/04/2026",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "items.0.description",
+          "raw_value": "Consultation",
+          "value": "Consultation",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "items.0.quantity",
+          "raw_value": "1",
+          "value": "1",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "items.0.unit_price",
+          "raw_value": "100.00",
+          "value": "100.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "items.0.total",
+          "raw_value": "100.00",
+          "value": "100.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "items.1.description",
+          "raw_value": "Refunded service",
+          "value": "Refunded service",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "items.1.quantity",
+          "raw_value": "1",
+          "value": "1",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "items.1.unit_price",
+          "raw_value": "-10.00",
+          "value": "-10.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "items.1.total",
+          "raw_value": "-10.00",
+          "value": "-10.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "tax",
+          "raw_value": "5.00",
+          "value": "5.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "discount",
+          "raw_value": "5.00",
+          "value": "5.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "grand_total",
+          "raw_value": "90.00",
+          "value": "90.00",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "payment_method",
+          "raw_value": "card",
+          "value": "card",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "currency",
+          "raw_value": "USD",
+          "value": "USD",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        }
+      ]
+    }
+  ],
+  "unsupported_pages": []
+}

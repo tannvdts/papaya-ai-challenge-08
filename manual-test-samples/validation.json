@@ -1,0 +1,105 @@
+{
+  "validation": "All PDF pages opened by pypdf, rendered by Poppler and visually inspected. Image-only check passed. No OpenAI extraction calls.",
+  "pdf_count": 14,
+  "page_count": 17,
+  "results": [
+    {
+      "id": "MT-01-clean-receipt",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 79173
+    },
+    {
+      "id": "MT-02-faded-vietnamese",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 12279
+    },
+    {
+      "id": "MT-03-european-money",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 57326
+    },
+    {
+      "id": "MT-04-unknown-currency",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 78582
+    },
+    {
+      "id": "MT-05-skewed-lab-flags",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 55512
+    },
+    {
+      "id": "MT-06-fax-missing-flag",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 24551
+    },
+    {
+      "id": "MT-07-discharge-two-pages",
+      "pages": 2,
+      "hidden_text": false,
+      "rendered_pages": 2,
+      "size_bytes": 88071
+    },
+    {
+      "id": "MT-08-uncertain-boundary-patients",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 10986
+    },
+    {
+      "id": "MT-09-mixed-bundle",
+      "pages": 3,
+      "hidden_text": false,
+      "rendered_pages": 3,
+      "size_bytes": 213095
+    },
+    {
+      "id": "MT-10-handwritten-prescription",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 2028870
+    },
+    {
+      "id": "MT-11-unreadable-scan",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 17104
+    },
+    {
+      "id": "MT-12-missing-date-and-total",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 70881
+    },
+    {
+      "id": "MT-13-total-mismatch",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 79383
+    },
+    {
+      "id": "MT-14-french-prescription-photo",
+      "pages": 1,
+      "hidden_text": false,
+      "rendered_pages": 1,
+      "size_bytes": 59008
+    }
+  ]
+}

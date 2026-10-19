@@ -1,0 +1,34 @@
+name: local-stack-tests
+on: [push, pull_request]
+jobs:
+  deterministic:
+    runs-on: ubuntu-latest
+    env:
+      TEST_RUN_ID: ci-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: cp .env.example .env
+      - run: docker compose up -d --wait mongodb
+      - run: npm test
+      - run: npm run test:smoke
+      - run: npm run test:integration
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - if: always()
+        run: npm run test:integration:live
+      - if: always()
+        run: npm run test:report
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: runtime/test-reports/
+          retention-days: 30
+      - if: always()
+        run: docker compose down

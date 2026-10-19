@@ -1,0 +1,23 @@
+{
+  "id": "MT-03-european-money",
+  "title": "Tiếng Pháp, định dạng tiền khác chuẩn",
+  "file": "MT-03-european-money.pdf",
+  "page_count": 1,
+  "document_types": [
+    "receipt"
+  ],
+  "risks": [
+    "French",
+    "shadow",
+    "European separators"
+  ],
+  "expected": {
+    "currency": "EUR",
+    "grand_total_raw": "1.234,56",
+    "review": true,
+    "no_silent_conversion": true,
+    "decision": "Preserve raw and source crop. Current parser may leave normalized value null; reviewer confirms decimal interpretation."
+  },
+  "synthetic": true,
+  "image_only": true
+}

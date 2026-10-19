@@ -1,0 +1,537 @@
+{
+  "mode": "mock; NOT OpenAI benchmark",
+  "_id": "6ad5c3996180acd28754817e",
+  "task_id": "51068169-a070-4811-8ab4-f71599e05c90",
+  "revision": 1,
+  "status": "awaiting_review",
+  "created_at": "2026-10-19T07:15:37.196Z",
+  "filename": "DOC-RX-02.pdf",
+  "source_hash": "c5da93a2cb7437eeda9fd83035c107b3d68fa64f7f8f18c47ef70885a0dd05e6",
+  "coverage": true,
+  "confidence": 0,
+  "final_confidence": 0,
+  "lease_until": "2026-10-19T07:17:07.901Z",
+  "checkpoint": "extracted",
+  "pages": [
+    {
+      "number": 1,
+      "image": "page-1.png",
+      "width": 1012,
+      "height": 1432,
+      "text": "PRESCRIPTION \nSYNTHETIC TRAINING FIXTURE — NOT A REAL PATIENT / NOT MEDICAL ADVICE \ndocument_type: prescription\nDocument reference DOC-RX-02\ndoctor_name: Dr Demo\npatient_name: Synthetic Patient P2\ndate: 23/04/2026\nmedications.0.name: Demo medicine (synthetic)\nmedications.0.dosage: [not visible]\nmedications.0.frequency: once daily\nmedications.0.duration: 3 days\nmedications.0.quantity: 3 "
+    }
+  ],
+  "unsupported_pages": [],
+  "report_created_at": "2026-10-19T07:15:38.070Z",
+  "report_error": null,
+  "report_expires_at": "2026-11-18T07:15:38.063Z",
+  "report_revision": 1,
+  "scan_task_id": "51068169-a070-4811-8ab4-f71599e05c90",
+  "documents": [
+    {
+      "document_type": "prescription",
+      "classification_confidence": 0.95,
+      "segmentation_confidence": 0.9,
+      "pages": [
+        1
+      ],
+      "fields": {
+        "doctor_name": {
+          "value": "Dr Demo",
+          "confidence": 0.9,
+          "raw_value": "Dr Demo",
+          "candidate_value": null,
+          "final_value": "Dr Demo",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "patient_name": {
+          "value": "Synthetic Patient P2",
+          "confidence": 0.9,
+          "raw_value": "Synthetic Patient P2",
+          "candidate_value": null,
+          "final_value": "Synthetic Patient P2",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "date": {
+          "value": "2026-04-23",
+          "confidence": 0.9,
+          "raw_value": "23/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-23",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "medications": {
+          "value": [
+            {
+              "name": {
+                "value": "Demo medicine (synthetic)",
+                "confidence": 0.9,
+                "raw_value": "Demo medicine (synthetic)",
+                "candidate_value": null,
+                "final_value": "Demo medicine (synthetic)",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-3.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "dosage": {
+                "value": null,
+                "confidence": 0,
+                "raw_value": null,
+                "candidate_value": null,
+                "final_value": null,
+                "final_confidence": 0,
+                "review_status": "pending",
+                "requires_review": true,
+                "warnings": [
+                  "MISSING_FIELD"
+                ]
+              },
+              "frequency": {
+                "value": "once daily",
+                "confidence": 0.9,
+                "raw_value": "once daily",
+                "candidate_value": null,
+                "final_value": "once daily",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-5.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "duration": {
+                "value": "3 days",
+                "confidence": 0.9,
+                "raw_value": "3 days",
+                "candidate_value": null,
+                "final_value": "3 days",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-6.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              },
+              "quantity": {
+                "value": "3",
+                "confidence": 0.9,
+                "raw_value": "3",
+                "candidate_value": null,
+                "final_value": "3",
+                "final_confidence": 0.9,
+                "review_status": "pending",
+                "requires_review": false,
+                "warnings": [],
+                "evidence": {
+                  "page": 1,
+                  "bbox": null,
+                  "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-7.png",
+                  "source_image": "pages/page-1.png",
+                  "fallback": true
+                }
+              }
+            }
+          ],
+          "confidence": 0,
+          "final_confidence": 0
+        }
+      },
+      "document_id": "e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf",
+      "structure_confirmed": false,
+      "confidence": 0,
+      "final_confidence": 0,
+      "validation_errors": [],
+      "field_list": [
+        {
+          "path": "doctor_name",
+          "raw_value": "Dr Demo",
+          "value": "Dr Demo",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Dr Demo",
+          "candidate_value": null,
+          "normalized_value": "Dr Demo",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "patient_name",
+          "raw_value": "Synthetic Patient P2",
+          "value": "Synthetic Patient P2",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Synthetic Patient P2",
+          "candidate_value": null,
+          "normalized_value": "Synthetic Patient P2",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "date",
+          "raw_value": "23/04/2026",
+          "value": "23/04/2026",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "2026-04-23",
+          "candidate_value": null,
+          "normalized_value": "2026-04-23",
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "medications.0.name",
+          "raw_value": "Demo medicine (synthetic)",
+          "value": "Demo medicine (synthetic)",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "Demo medicine (synthetic)",
+          "candidate_value": null,
+          "normalized_value": "Demo medicine (synthetic)",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "medications.0.dosage",
+          "raw_value": null,
+          "value": null,
+          "confidence": 0,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0,
+          "final_confidence": 0,
+          "final_value": null,
+          "candidate_value": null,
+          "normalized_value": null,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [
+            "MISSING_FIELD"
+          ],
+          "missing": true
+        },
+        {
+          "path": "medications.0.frequency",
+          "raw_value": "once daily",
+          "value": "once daily",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "once daily",
+          "candidate_value": null,
+          "normalized_value": "once daily",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-5.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "medications.0.duration",
+          "raw_value": "3 days",
+          "value": "3 days",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "3 days",
+          "candidate_value": null,
+          "normalized_value": "3 days",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-6.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        {
+          "path": "medications.0.quantity",
+          "raw_value": "3",
+          "value": "3",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false,
+          "extraction_confidence": 0.9,
+          "final_confidence": 0.9,
+          "final_value": "3",
+          "candidate_value": null,
+          "normalized_value": "3",
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "missing": false,
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        }
+      ],
+      "fields_by_path": {
+        "doctor_name": {
+          "value": "Dr Demo",
+          "confidence": 0.9,
+          "raw_value": "Dr Demo",
+          "candidate_value": null,
+          "final_value": "Dr Demo",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-0.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "patient_name": {
+          "value": "Synthetic Patient P2",
+          "confidence": 0.9,
+          "raw_value": "Synthetic Patient P2",
+          "candidate_value": null,
+          "final_value": "Synthetic Patient P2",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-1.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "date": {
+          "value": "2026-04-23",
+          "confidence": 0.9,
+          "raw_value": "23/04/2026",
+          "candidate_value": null,
+          "final_value": "2026-04-23",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-2.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "medications.0.name": {
+          "value": "Demo medicine (synthetic)",
+          "confidence": 0.9,
+          "raw_value": "Demo medicine (synthetic)",
+          "candidate_value": null,
+          "final_value": "Demo medicine (synthetic)",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-3.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "medications.0.dosage": {
+          "value": null,
+          "confidence": 0,
+          "raw_value": null,
+          "candidate_value": null,
+          "final_value": null,
+          "final_confidence": 0,
+          "review_status": "pending",
+          "requires_review": true,
+          "warnings": [
+            "MISSING_FIELD"
+          ]
+        },
+        "medications.0.frequency": {
+          "value": "once daily",
+          "confidence": 0.9,
+          "raw_value": "once daily",
+          "candidate_value": null,
+          "final_value": "once daily",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-5.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "medications.0.duration": {
+          "value": "3 days",
+          "confidence": 0.9,
+          "raw_value": "3 days",
+          "candidate_value": null,
+          "final_value": "3 days",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-6.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        },
+        "medications.0.quantity": {
+          "value": "3",
+          "confidence": 0.9,
+          "raw_value": "3",
+          "candidate_value": null,
+          "final_value": "3",
+          "final_confidence": 0.9,
+          "review_status": "pending",
+          "requires_review": false,
+          "warnings": [],
+          "evidence": {
+            "page": 1,
+            "bbox": null,
+            "image": "evidence/1/e6df39e9-f7d2-48b3-b9f4-a69aa0acc2bf-7.png",
+            "source_image": "pages/page-1.png",
+            "fallback": true
+          }
+        }
+      }
+    }
+  ],
+  "report": {
+    "url": "/reports/51068169-a070-4811-8ab4-f71599e05c90/index.html",
+    "expires_at": "2026-11-18T07:15:38.063Z",
+    "revision": 1
+  }
+}

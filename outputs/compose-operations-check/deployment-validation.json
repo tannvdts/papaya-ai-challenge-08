@@ -1,0 +1,18 @@
+{
+  "docker_build_runtime": "PASS",
+  "docker_build_test": "PASS",
+  "smoke_pass": 12,
+  "integration_pass": 73,
+  "live_tests": "NOT_RUN",
+  "manual_upload_http": 201,
+  "scan_report_http": 200,
+  "test_report_http": 200,
+  "env_port_change": [
+    4127,
+    4128
+  ],
+  "data_retained_after_recreate": true,
+  "origin_tracks_new_port": true,
+  "shared_volume_user": "node",
+  "openai_calls": 0
+}

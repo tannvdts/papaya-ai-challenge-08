@@ -1,0 +1,87 @@
+{
+  "documents": [
+    {
+      "document_type": "prescription",
+      "classification_confidence": 0.95,
+      "segmentation_confidence": 0.9,
+      "pages": [
+        1
+      ],
+      "fields": [
+        {
+          "path": "doctor_name",
+          "raw_value": "Dr Demo",
+          "value": "Dr Demo",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "patient_name",
+          "raw_value": "Synthetic Patient P1",
+          "value": "Synthetic Patient P1",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "date",
+          "raw_value": "23/04/2026",
+          "value": "23/04/2026",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "medications.0.name",
+          "raw_value": "Demo medicine (synthetic)",
+          "value": "Demo medicine (synthetic)",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "medications.0.dosage",
+          "raw_value": "1 unit",
+          "value": "1 unit",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "medications.0.frequency",
+          "raw_value": "once daily",
+          "value": "once daily",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "medications.0.duration",
+          "raw_value": "3 days",
+          "value": "3 days",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        },
+        {
+          "path": "medications.0.quantity",
+          "raw_value": "3",
+          "value": "3",
+          "confidence": 0.9,
+          "page": 1,
+          "bbox": null,
+          "handwritten_uncertain": false
+        }
+      ]
+    }
+  ],
+  "unsupported_pages": []
+}
